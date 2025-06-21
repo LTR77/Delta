@@ -6,7 +6,7 @@ No, this template is free and public for anyone to use. You are welcome to utili
 
 ---
 
-# Installation
+# Installation_it's trash anyways
 
 - Download the source code from [here](https://github.com/iiDk-the-actual/iis.Stupid.Template/releases/latest)
 - Change your `<GamePath>` (Gorilla Tag directory) in `Directory.Build.props` if required
