@@ -125,7 +125,7 @@ namespace StupidTemplate.Menu
                 menuBackground.transform.rotation = Quaternion.identity;
                 menuBackground.transform.localScale = menuSize;
                 menuBackground.GetComponent<Renderer>().material.color = backgroundColor.colors[0].color;
-                menuBackground.transform.position = new Vector3(0.05f, 0f, 0f);
+            menuBackground.transform.position = new Vector3(0.05f, 0f, 0f);
 
                 ColorChanger colorChanger = menuBackground.AddComponent<ColorChanger>();
                 colorChanger.colorInfo = backgroundColor;

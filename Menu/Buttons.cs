@@ -10,10 +10,10 @@ namespace GorillaX.Menu
         public static ButtonInfo[][] buttons = new ButtonInfo[][]
         {
             new ButtonInfo[] { // Main Mods
+                new ButtonInfo { buttonText = "Symbols", method =() => SettingsMods.EnterSymbols(), isTogglable = false, toolTip = "Opens the Symbol meanings page for the menu"},
                 new ButtonInfo { buttonText = "Settings", method =() => SettingsMods.EnterSettings(), isTogglable = false, toolTip = "Opens the main settings page for the menu."},
-                new ButtonInfo { buttonText = "Speedboost", method =() => SpeedBoost.SpeedBoostMod(), isTogglable = true, toolTip = "Toggle Speedboost."},
-                new ButtonInfo { buttonText = "Speedboost", method =() => Fly.FlyMod(), isTogglable = true, toolTip = "Toggle Fly."},
-                new ButtonInfo { buttonText = "regular placeholder 2", isTogglable = false},
+                new ButtonInfo { buttonText = "Movement", method =() => SettingsMods.EnterMovement(), isTogglable = false, toolTip = "Opens the movement page for the menu."},
+
                 new ButtonInfo { buttonText = "togglable placeholder 2"},
                 new ButtonInfo { buttonText = "regular placeholder 3", isTogglable = false},
                 new ButtonInfo { buttonText = "togglable placeholder 3"},
@@ -21,19 +21,20 @@ namespace GorillaX.Menu
                 new ButtonInfo { buttonText = "togglable placeholder 4"},
                 new ButtonInfo { buttonText = "regular placeholder 5", isTogglable = false},
                 new ButtonInfo { buttonText = "togglable placeholder 5"},
+
                 new ButtonInfo { buttonText = "regular placeholder 6", isTogglable = false},
                 new ButtonInfo { buttonText = "togglable placeholder 6"},
-            },
 
+            },
             new ButtonInfo[] { // Settings
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
-                new ButtonInfo { buttonText = "Menu", method =() => SettingsMods.MenuSettings(), isTogglable = false, toolTip = "Opens the settings for the menu."},
-                new ButtonInfo { buttonText = "Movement", method =() => SettingsMods.MovementSettings(), isTogglable = false, toolTip = "Opens the movement settings for the menu."},
-                new ButtonInfo { buttonText = "Projectile", method =() => SettingsMods.ProjectileSettings(), isTogglable = false, toolTip = "Opens the projectile settings for the menu."},
+                new ButtonInfo { buttonText = "Menu Settings", method =() => SettingsMods.MenuSettings(), isTogglable = false, toolTip = "Opens the settings for the menu."},
+                new ButtonInfo { buttonText = "Movement Settings", method =() => SettingsMods.MovementSettings(), isTogglable = false, toolTip = "Opens the movement settings for the menu."},
             },
 
             new ButtonInfo[] { // Menu Settings
                 new ButtonInfo { buttonText = "Return to Settings", method =() => SettingsMods.EnterSettings(), isTogglable = false, toolTip = "Returns to the main settings page for the menu."},
+                new ButtonInfo { buttonText = "Rainbow", method =() =>SettingsMods.SetRainbow(), isTogglable = true, toolTip = "sets the menu color to rainbow" },
                 new ButtonInfo { buttonText = "Right Hand", enableMethod =() => SettingsMods.RightHand(), disableMethod =() => SettingsMods.LeftHand(), toolTip = "Puts the menu on your right hand."},
                 new ButtonInfo { buttonText = "Notifications", enableMethod =() => SettingsMods.EnableNotifications(), disableMethod =() => SettingsMods.DisableNotifications(), enabled = !disableNotifications, toolTip = "Toggles the notifications."},
                 new ButtonInfo { buttonText = "FPS Counter", enableMethod =() => SettingsMods.EnableFPSCounter(), disableMethod =() => SettingsMods.DisableFPSCounter(), enabled = fpsCounter, toolTip = "Toggles the FPS counter."},
@@ -47,6 +48,26 @@ namespace GorillaX.Menu
             new ButtonInfo[] { // Projectile Settings
                 new ButtonInfo { buttonText = "Return to Settings", method =() => SettingsMods.MenuSettings(), isTogglable = false, toolTip = "Opens the settings for the menu."},
             },
+            new ButtonInfo[] { // Movement Mods
+                new ButtonInfo { buttonText = "Return to Main [W]", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
+                new ButtonInfo { buttonText = "Speedboost [UND] [W]", method =() => SpeedBoost.SpeedBoostMod(), isTogglable = true, toolTip = "Toggle Speedboost."},
+                new ButtonInfo { buttonText = "Fly [UND] [W]", method =() => Fly.FlyMod(), isTogglable = true, toolTip = "Toggle Fly."},
+                new ButtonInfo { buttonText = "Slingshot Fly [UND?] [W]", method =() => Fly.SlingshotFlyMod(), isTogglable = true, toolTip = "Fly with a Twist."},
+            },
+            new ButtonInfo[] {
+                new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
+
+                new ButtonInfo { buttonText = "UND = Undetected", isTogglable = false },
+                new ButtonInfo { buttonText = "D = Detected", isTogglable = false },
+                new ButtonInfo { buttonText = "UND? = might be D", isTogglable = false },
+                new ButtonInfo { buttonText = "DB = Delay Ban!", isTogglable = false },
+                new ButtonInfo { buttonText = "IB = Insta Ban", isTogglable = false },
+                new ButtonInfo { buttonText = "U = Unknown", isTogglable = false },
+                new ButtonInfo { buttonText = "BETA = Beta WIP", isTogglable = false },
+                new ButtonInfo { buttonText = "W = Working", isTogglable = false },
+                new ButtonInfo { buttonText = "NW = Not Working", isTogglable = false },
+                new ButtonInfo { buttonText = "W? = might be W", isTogglable = false },
+            }
         };
     }
 }

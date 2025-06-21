@@ -2,6 +2,7 @@
 using static StupidTemplate.Settings;
 
 namespace StupidTemplate.Mods
+
 {
     internal class SettingsMods
     {
@@ -9,7 +10,14 @@ namespace StupidTemplate.Mods
         {
             buttonsType = 1;
         }
-
+        public static void EnterMovement()
+        {
+            buttonsType = 5;
+        }
+        public static void EnterSymbols()
+        {
+            buttonsType = 6;
+        }
         public static void MenuSettings()
         {
             buttonsType = 2;
@@ -63,6 +71,17 @@ namespace StupidTemplate.Mods
         public static void DisableDisconnectButton()
         {
             disconnectButton = false;
+        }
+        public static void SetRainbow()
+        {
+            if(backgroundColor.isRainbow)
+            {
+               backgroundColor.isRainbow = false;
+            }
+            else
+            {
+                backgroundColor.isRainbow = true;
+            }
         }
     }
 }

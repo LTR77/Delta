@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BepInEx;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
@@ -20,7 +21,7 @@ namespace GorillaX.Mods
 
         public static void SlingshotFlyMod()
         {
-            if (ControllerInputPoller.instance.rightGrab)
+            if (ControllerInputPoller.instance.rightGrab || UnityInput.Current.GetKey(KeyCode.W))
             {
                 GorillaLocomotion.GTPlayer.Instance.transform.position += GorillaLocomotion.GTPlayer.Instance.headCollider.transform.forward * Time.deltaTime * flySpeed;
             }
