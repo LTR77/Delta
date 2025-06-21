@@ -14,3 +14,4 @@ No, this template is free and public for anyone to use. You are welcome to utili
 - Edit the menu visuals in `Menu/Settings.cs`
 - Add buttons in `Menu/Buttons.cs`
 - Build with `Ctrl` + `Shift` + `B`, it will get put in your plugins folder automatically
+sup bro
