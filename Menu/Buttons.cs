@@ -14,18 +14,13 @@ namespace GorillaX.Menu
                 new ButtonInfo { buttonText = "Settings", method =() => SettingsMods.EnterSettings(), isTogglable = false, toolTip = "Opens the main settings page for the menu."},
                 new ButtonInfo { buttonText = "Movement", method =() => SettingsMods.EnterMovement(), isTogglable = false, toolTip = "Opens the movement page for the menu."},
 
-                new ButtonInfo { buttonText = "togglable placeholder 2"},
-                new ButtonInfo { buttonText = "regular placeholder 3", isTogglable = false},
-                new ButtonInfo { buttonText = "togglable placeholder 3"},
-                new ButtonInfo { buttonText = "regular placeholder 4", isTogglable = false},
-                new ButtonInfo { buttonText = "togglable placeholder 4"},
-                new ButtonInfo { buttonText = "regular placeholder 5", isTogglable = false},
-                new ButtonInfo { buttonText = "togglable placeholder 5"},
-
-                new ButtonInfo { buttonText = "regular placeholder 6", isTogglable = false},
-                new ButtonInfo { buttonText = "togglable placeholder 6"},
+                // new ButtonInfo { buttonText = "regular placeholder 6", isTogglable = false},
+                // new ButtonInfo { buttonText = "togglable placeholder 6"},
 
             },
+
+
+
             new ButtonInfo[] { // Settings
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
                 new ButtonInfo { buttonText = "Menu Settings", method =() => SettingsMods.MenuSettings(), isTogglable = false, toolTip = "Opens the settings for the menu."},
@@ -45,14 +40,18 @@ namespace GorillaX.Menu
                 new ButtonInfo { buttonText = "Return to Settings", method =() => SettingsMods.EnterSettings(), isTogglable = false, toolTip = "Returns to the main settings page for the menu."},
             },
 
-            new ButtonInfo[] { // Projectile Settings
-                new ButtonInfo { buttonText = "Return to Settings", method =() => SettingsMods.MenuSettings(), isTogglable = false, toolTip = "Opens the settings for the menu."},
-            },
+
+
+
+
+
             new ButtonInfo[] { // Movement Mods
                 new ButtonInfo { buttonText = "Return to Main [W]", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
-                new ButtonInfo { buttonText = "Speedboost [UND] [W]", method =() => SpeedBoost.SpeedBoostMod(), isTogglable = true, toolTip = "Toggle Speedboost."},
-                new ButtonInfo { buttonText = "Fly [UND] [W]", method =() => Fly.FlyMod(), isTogglable = true, toolTip = "Toggle Fly."},
-                new ButtonInfo { buttonText = "Slingshot Fly [UND?] [W]", method =() => Fly.SlingshotFlyMod(), isTogglable = true, toolTip = "Fly with a Twist."},
+                new ButtonInfo { buttonText = "Speedboost [U] [W]", method =() => SpeedBoost.SpeedBoostMod(), isTogglable = true, toolTip = "Toggle Speedboost."},
+                new ButtonInfo { buttonText = "Fly [U] [W]", method =() => Fly.FlyMod(), isTogglable = true, toolTip = "Toggle Fly."},
+                new ButtonInfo { buttonText = "Slingshot Fly [U] [W]", method =() => Fly.SlingshotFlyMod(), isTogglable = true, toolTip = "Fly with a Twist."},
+                new ButtonInfo { buttonText = "Ghost Monkey [U] [W]", method =() => RigStuff.GhostMonkeyMod(), isTogglable = true, toolTip = "Go outside of your Body"},
+                new ButtonInfo { buttonText = "Invis Monkey [U] [W]", method =() => RigStuff.InvisMonkeyMod(), isTogglable = true, toolTip = "dissappear or something"},
             },
             new ButtonInfo[] {
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
@@ -61,12 +60,16 @@ namespace GorillaX.Menu
                 new ButtonInfo { buttonText = "D = Detected", isTogglable = false },
                 new ButtonInfo { buttonText = "UND? = might be D", isTogglable = false },
                 new ButtonInfo { buttonText = "DB = Delay Ban!", isTogglable = false },
-                new ButtonInfo { buttonText = "IB = Insta Ban", isTogglable = false },
+                new ButtonInfo { buttonText = "IB = Insta Ban!", isTogglable = false },
                 new ButtonInfo { buttonText = "U = Unknown", isTogglable = false },
                 new ButtonInfo { buttonText = "BETA = Beta WIP", isTogglable = false },
                 new ButtonInfo { buttonText = "W = Working", isTogglable = false },
                 new ButtonInfo { buttonText = "NW = Not Working", isTogglable = false },
                 new ButtonInfo { buttonText = "W? = might be W", isTogglable = false },
+                new ButtonInfo { buttonText = "SS = Serversided", isTogglable = false },
+                new ButtonInfo { buttonText = "CS = Clientsided", isTogglable = false },
+
+
             }
         };
     }

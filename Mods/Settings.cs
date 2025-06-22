@@ -10,14 +10,7 @@ namespace StupidTemplate.Mods
         {
             buttonsType = 1;
         }
-        public static void EnterMovement()
-        {
-            buttonsType = 5;
-        }
-        public static void EnterSymbols()
-        {
-            buttonsType = 6;
-        }
+
         public static void MenuSettings()
         {
             buttonsType = 2;
@@ -27,11 +20,15 @@ namespace StupidTemplate.Mods
         {
             buttonsType = 3;
         }
-
-        public static void ProjectileSettings()
+        public static void EnterMovement()
         {
-            buttonsType = 4;
+            buttonsType = 5;
         }
+        public static void EnterSymbols()
+        {
+            buttonsType = 6;
+        }
+
 
         public static void RightHand()
         {
