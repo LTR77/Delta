@@ -22,11 +22,11 @@ namespace StupidTemplate.Mods
         }
         public static void EnterMovement()
         {
-            buttonsType = 5;
+            buttonsType = 4;
         }
         public static void EnterSymbols()
         {
-            buttonsType = 6;
+            buttonsType = 5;
         }
 
 
@@ -71,13 +71,16 @@ namespace StupidTemplate.Mods
         }
         public static void SetRainbow()
         {
-            if(backgroundColor.isRainbow)
+            for(int i = 0;i<1;i++)
             {
-               backgroundColor.isRainbow = false;
-            }
-            else
-            {
-                backgroundColor.isRainbow = true;
+                if (backgroundColor.isRainbow)
+                {
+                    backgroundColor.isRainbow = false;
+                }
+                else
+                {
+                    backgroundColor.isRainbow = true;
+                }
             }
         }
     }
