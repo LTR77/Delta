@@ -41,10 +41,6 @@ namespace GorillaX.Menu
             },
 
 
-
-
-
-
             new ButtonInfo[] { // Movement Mods
                 new ButtonInfo { buttonText = "Return to Main [W]", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
                 new ButtonInfo { buttonText = "Speedboost [U] [W]", method =() => SpeedBoost.SpeedBoostMod(), isTogglable = true, toolTip = "Toggle Speedboost."},
@@ -74,3 +70,5 @@ namespace GorillaX.Menu
         };
     }
 }
+
+// test
