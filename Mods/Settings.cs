@@ -35,6 +35,11 @@ namespace StupidTemplate.Mods
         {
             buttonsType = 6;
         }
+        public static void EnterUseful()
+        {
+            buttonsType = 7;
+        }
+
 
 
         public static void RightHand()
@@ -98,7 +103,14 @@ namespace GorillaX.Classes
     {
         public static void ChangeFaidToColorMod()
         {
-            Color[] colors = {Color.red, Color.green, Color.blue, Color.yellow, Color.cyan, Color.magenta};
+            Color[] colors = { Color.red, Color.green, Color.blue, Color.yellow, Color.cyan, Color.magenta };
+            int ColorCycler = 0;
+            ColorCycler += 1;
+            if (ColorCycler >= colors.Length)
+            {
+                ColorCycler = 0;
+            }
+
         }
     }
 }

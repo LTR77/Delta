@@ -12,7 +12,9 @@ namespace GorillaX.Menu
             new ButtonInfo[] { // Main Mods
                 new ButtonInfo { buttonText = "Symbols", method =() => SettingsMods.EnterSymbols(), isTogglable = false, toolTip = "Opens the Symbol meanings page for the menu"},
                 new ButtonInfo { buttonText = "Settings", method =() => SettingsMods.EnterSettings(), isTogglable = false, toolTip = "Opens the main settings page for the menu."},
-                new ButtonInfo { buttonText = "Movement", method =() => SettingsMods.EnterMovement(), isTogglable = false, toolTip = "Opens the movement page for the menu."},
+                new ButtonInfo { buttonText = "Movement", method =() => SettingsMods.EnterMovement(), isTogglable = false, toolTip = "Opens the movement mods page for the menu."},
+                new ButtonInfo { buttonText = "Useful", method =() => SettingsMods.EnterUseful(), isTogglable = false, toolTip = "Opens the Useful mods page for the menu."},
+
 
                 new ButtonInfo { buttonText = "OP Mods", method =() => SettingsMods.EnterOP(), isTogglable = false, toolTip = "Opens the Overpowered mods page for the menu."},
 
@@ -31,6 +33,7 @@ namespace GorillaX.Menu
 
             new ButtonInfo[] { // Menu Settings
                 new ButtonInfo { buttonText = "Return to Settings", method =() => SettingsMods.EnterSettings(), isTogglable = false, toolTip = "Returns to the main settings page for the menu."},
+                new ButtonInfo { buttonText = "Change Fade Color", method =() => SettingsMods.EnterSettings(), isTogglable = false, toolTip = "Returns to the main settings page for the menu."},
                 new ButtonInfo { buttonText = "Rainbow", method =() =>SettingsMods.SetRainbow(), isTogglable = false, toolTip = "sets the menu color to rainbow" },
                 new ButtonInfo { buttonText = "Right Hand", enableMethod =() => SettingsMods.RightHand(), disableMethod =() => SettingsMods.LeftHand(), toolTip = "Puts the menu on your right hand."},
                 new ButtonInfo { buttonText = "Notifications", enableMethod =() => SettingsMods.EnableNotifications(), disableMethod =() => SettingsMods.DisableNotifications(), enabled = !disableNotifications, toolTip = "Toggles the notifications."},
@@ -48,10 +51,10 @@ namespace GorillaX.Menu
                 new ButtonInfo { buttonText = "Speedboost [U] [W]", method =() => SpeedBoost.SpeedBoostMod(), isTogglable = true, toolTip = "Toggle Speedboost."},
                 new ButtonInfo { buttonText = "Fly [U] [W]", method =() => Fly.FlyMod(), isTogglable = true, toolTip = "Toggle Fly."},
                 new ButtonInfo { buttonText = "Slingshot Fly [U] [W]", method =() => Fly.SlingshotFlyMod(), isTogglable = true, toolTip = "Fly with a Twist."},
-                new ButtonInfo { buttonText = "Ghost Monkey [U] [W]", method =() => RigStuff.GhostMonkeyMod(), isTogglable = true, toolTip = "Go outside of your Body"},
+                new ButtonInfo { buttonText = "Ghost Monkey [D] [W]", method =() => RigStuff.GhostMonkeyMod(), isTogglable = true, toolTip = "Go outside of your Body"},
                 new ButtonInfo { buttonText = "Invis Monkey [U] [W]", method =() => RigStuff.InvisMonkeyMod(), isTogglable = true, toolTip = "dissappear or something"},
             },
-            new ButtonInfo[] {
+            new ButtonInfo[] { // Symbols
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
 
                 new ButtonInfo { buttonText = "UND = Undetected", isTogglable = false },
@@ -69,9 +72,14 @@ namespace GorillaX.Menu
 
 
             },
-            new ButtonInfo[] {               
+            new ButtonInfo[] {               // OP Mods
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
-                new ButtonInfo { buttonText = "Unlock All Cosmetics", method =() => OP.UnlockCosmeticsMod(), isTogglable = false, toolTip = "Unlocks all cosmetics in the game."},
+                new ButtonInfo { buttonText = "PlaceHolder", method =() => OP.UnlockCosmeticsMod(), isTogglable = false, toolTip = "Unlocks all cosmetics in the game.NOT WORKING"},
+            },
+            new ButtonInfo[] { // Useful Mods
+                new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
+                new ButtonInfo { buttonText = "Accept TOS", method =() => Useful.AcceptTOSMod(), isTogglable = false, toolTip = "Accepts the annoying ass tos"},
+
             }
         };
     }
