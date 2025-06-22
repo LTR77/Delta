@@ -1,7 +1,10 @@
-﻿using static StupidTemplate.Menu.Main;
+﻿using System.Collections.Generic;
+using UnityEngine;
+using static StupidTemplate.Menu.Main;
 using static StupidTemplate.Settings;
 
 namespace StupidTemplate.Mods
+
 
 {
     internal class SettingsMods
@@ -75,7 +78,7 @@ namespace StupidTemplate.Mods
         }
         public static void SetRainbow()
         {
-            for(int i = 0;i<1;i++)
+            for (int i = 0; i < 1; i++)
             {
                 if (backgroundColor.isRainbow)
                 {
@@ -89,3 +92,14 @@ namespace StupidTemplate.Mods
         }
     }
 }
+namespace GorillaX.Classes
+{
+    internal class ColorCustom
+    {
+        public static void ChangeFaidToColorMod()
+        {
+            Color[] colors = {Color.red, Color.green, Color.blue, Color.yellow, Color.cyan, Color.magenta};
+        }
+    }
+}
+
