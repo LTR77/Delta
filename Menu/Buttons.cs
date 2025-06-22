@@ -42,7 +42,7 @@ namespace GorillaX.Menu
 
 
             new ButtonInfo[] { // Movement Mods
-                new ButtonInfo { buttonText = "Return to Main [W]", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
+                new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
                 new ButtonInfo { buttonText = "Speedboost [U] [W]", method =() => SpeedBoost.SpeedBoostMod(), isTogglable = true, toolTip = "Toggle Speedboost."},
                 new ButtonInfo { buttonText = "Fly [U] [W]", method =() => Fly.FlyMod(), isTogglable = true, toolTip = "Toggle Fly."},
                 new ButtonInfo { buttonText = "Slingshot Fly [U] [W]", method =() => Fly.SlingshotFlyMod(), isTogglable = true, toolTip = "Fly with a Twist."},
