@@ -1,6 +1,8 @@
-﻿using System;
+﻿using BepInEx;
+using System;
 using System.Collections.Generic;
 using System.Text;
+using UnityEngine.InputSystem;
 
 namespace GorillaX.Mods
 {
@@ -9,7 +11,7 @@ namespace GorillaX.Mods
         public static bool GMToggled = false;
         public static void GhostMonkeyMod() 
         {
-            if(ControllerInputPoller.instance.leftControllerPrimaryButton)
+            if(ControllerInputPoller.instance.leftControllerPrimaryButton || UnityInput.Current.GetKey(UnityEngine.KeyCode.Z))
             {
                 GMToggled = true;
                 if(GMToggled)
@@ -26,7 +28,7 @@ namespace GorillaX.Mods
         }
         public static void InvisMonkeyMod()
         {
-            if (ControllerInputPoller.instance.leftControllerPrimaryButton)
+            if (ControllerInputPoller.instance.leftControllerPrimaryButton || UnityInput.Current.GetKey(UnityEngine.KeyCode.X))
             {
                 GMToggled = true;
                 if (GMToggled)
