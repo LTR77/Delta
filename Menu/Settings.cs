@@ -25,7 +25,7 @@ namespace StupidTemplate
         public static bool rightHanded = false;
         public static bool disableNotifications = false;
 
-        public static KeyCode keyboardButton = KeyCode.Q;
+        public static KeyCode keyboardButton = KeyCode.E;
 
         public static Vector3 menuSize = new Vector3(0.1f, 1f, 1f); // Depth, Width, Height
         public static int buttonsPerPage = 8;
