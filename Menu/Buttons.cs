@@ -47,13 +47,16 @@ namespace GorillaX.Menu
 
             new ButtonInfo[] { // Movement Mods
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
-                new ButtonInfo { buttonText = "Speedboost [U] [W]", method =() => SpeedBoost.SpeedBoostMod(), isTogglable = true, toolTip = "Toggle Speedboost."},
+                new ButtonInfo { buttonText = "Speedboost [UND] [W]", method =() => SpeedBoost.SpeedBoostMod(), isTogglable = true, toolTip = "Toggle Speedboost."},
                 new ButtonInfo { buttonText = "Fly [U] [W]", method =() => Fly.FlyMod(), isTogglable = true, toolTip = "Toggle Fly."},
-                new ButtonInfo { buttonText = "Bounce Fly [U] [W]", method =() => Fly.SlingshotFlyMod(), isTogglable = true, toolTip = "Fly with a Twist."},
+                new ButtonInfo { buttonText = "Bounce Fly [U] [SDT] [W]", method =() => Fly.SlingshotFlyMod(), isTogglable = true, toolTip = "Fly with a Twist."},
                 new ButtonInfo { buttonText = "Ghost Monkey [D] [SW]", method =() => RigStuff.GhostMonkeyMod(), isTogglable = true, toolTip = "Go outside of your Body"},
                 new ButtonInfo { buttonText = "Invis Monkey [U] [W]", method =() => RigStuff.InvisMonkeyMod(), isTogglable = true, toolTip = "dissappear or something"},
                 new ButtonInfo { buttonText = "Fix Rig [U] [W]", method =() => RigStuff.InvisMonkeyMod(), isTogglable = true, toolTip = "dissappear or something"},
-
+                new ButtonInfo { buttonText = "0 Gravity [UND] [W]", method =() => Gravity.ZeroGravityMod(), isTogglable = true, toolTip = "No Gravity"},
+                new ButtonInfo { buttonText = "Low Gravity [UND] [W]", method =() => Gravity.LowGravityMod(), isTogglable = true, toolTip = "Low Gravity"},
+                new ButtonInfo { buttonText = "High Gravity [UND] [W]", method =() => Gravity.HighGravityMod(), isTogglable = true, toolTip = "High Gravity"},
+                new ButtonInfo { buttonText = "Backwards Gravity [UND] [W]", method =() => Gravity.BackwardsGravityMod(), isTogglable = true, toolTip = "Backwards Gravity (you fly up)"},
             },
             new ButtonInfo[] { // Symbols
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
@@ -71,6 +74,7 @@ namespace GorillaX.Menu
                 new ButtonInfo { buttonText = "W? = might be W", isTogglable = false },
                 new ButtonInfo { buttonText = "SS = Serversided", isTogglable = false },
                 new ButtonInfo { buttonText = "CS = Clientsided", isTogglable = false },
+                new ButtonInfo { buttonText = "SDT = Super Duper Tank", isTogglable = false},
             },
             new ButtonInfo[] {               // OP Mods
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
