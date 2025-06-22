@@ -11,6 +11,8 @@ namespace GorillaX.Mods
         {
             GameObject.Find("LegalAgreementCheck").SetActive(false);
             GameObject.Find("PrivateUIRoom").SetActive(false);
+            GameObject.Find("MetaReporting").SetActive(false);
+            GameObject.Find("PopUpMessage").SetActive(false);
         }
     }
 }
