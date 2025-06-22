@@ -8,41 +8,33 @@ namespace GorillaX.Mods
 {
     internal class RigStuff
     {
-        public static bool GMToggled = false;
+        private static bool GMToggled = false;
+        private static bool IMToggled = false;
         public static void GhostMonkeyMod() 
         {
             if(ControllerInputPoller.instance.leftControllerPrimaryButton || UnityInput.Current.GetKey(UnityEngine.KeyCode.Z))
             {
-                GMToggled = true;
-                if(GMToggled)
-                {
-                    GorillaTagger.Instance.offlineVRRig.enabled = false;
-                    GMToggled = false;
-                }
-                else
-                {
-                    GorillaTagger.Instance.offlineVRRig.enabled = true;
-                    GMToggled = true;
-                }
+                GMToggled = !GMToggled;
+                GorillaTagger.Instance.offlineVRRig.enabled = !GMToggled;
             }
         }
         public static void InvisMonkeyMod()
         {
             if (ControllerInputPoller.instance.leftControllerPrimaryButton || UnityInput.Current.GetKey(UnityEngine.KeyCode.X))
             {
-                GMToggled = true;
-                if (GMToggled)
+                IMToggled = !IMToggled;
+                GorillaTagger.Instance.offlineVRRig.enabled = !IMToggled;
+                if(IMToggled)
                 {
-                    GorillaTagger.Instance.offlineVRRig.enabled = false;
                     GorillaTagger.Instance.offlineVRRig.transform.position = new UnityEngine.Vector3(0, 0, 0);
-                    GMToggled = false;
-                }
-                else
-                {
-                    GorillaTagger.Instance.offlineVRRig.enabled = true;
-                    GMToggled = true;
                 }
             }
+        }
+        public static void FixRig()
+        {
+            GMToggled = false;
+            IMToggled = false;
+            GorillaTagger.Instance.offlineVRRig.enabled = true;
         }
     }
 }

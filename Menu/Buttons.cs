@@ -14,6 +14,8 @@ namespace GorillaX.Menu
                 new ButtonInfo { buttonText = "Settings", method =() => SettingsMods.EnterSettings(), isTogglable = false, toolTip = "Opens the main settings page for the menu."},
                 new ButtonInfo { buttonText = "Movement", method =() => SettingsMods.EnterMovement(), isTogglable = false, toolTip = "Opens the movement page for the menu."},
 
+                new ButtonInfo { buttonText = "OP Mods", method =() => SettingsMods.EnterOP(), isTogglable = false, toolTip = "Opens the Overpowered mods page for the menu."},
+
                 // new ButtonInfo { buttonText = "regular placeholder 6", isTogglable = false},
                 // new ButtonInfo { buttonText = "togglable placeholder 6"},
 
@@ -66,6 +68,10 @@ namespace GorillaX.Menu
                 new ButtonInfo { buttonText = "CS = Clientsided", isTogglable = false },
 
 
+            },
+            new ButtonInfo[] {               
+                new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
+                new ButtonInfo { buttonText = "Unlock All Cosmetics", method =() => OP.UnlockCosmeticsMod(), isTogglable = false, toolTip = "Unlocks all cosmetics in the game."},
             }
         };
     }

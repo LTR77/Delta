@@ -28,6 +28,10 @@ namespace StupidTemplate.Mods
         {
             buttonsType = 5;
         }
+        public static void EnterOP()
+        {
+            buttonsType = 6;
+        }
 
 
         public static void RightHand()
