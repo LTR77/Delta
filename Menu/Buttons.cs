@@ -56,6 +56,7 @@ namespace GorillaX.Menu
                 new ButtonInfo { buttonText = "Low Gravity [UND] [W]", method =() => Gravity.LowGravityMod(), isTogglable = true, toolTip = "Low Gravity"},
                 new ButtonInfo { buttonText = "High Gravity [UND] [W]", method =() => Gravity.HighGravityMod(), isTogglable = true, toolTip = "High Gravity"},
                 new ButtonInfo { buttonText = "Backwards Gravity [UND] [W]", method =() => Gravity.BackwardsGravityMod(), isTogglable = true, toolTip = "Backwards Gravity (you fly up)"},
+                new ButtonInfo { buttonText = "Cursed TP Gun [UND?] [SW]", method =() => TPGun.TPGunMod(), isTogglable = true, toolTip = "Ass Teleport Gun Probs D"}
             },
             new ButtonInfo[] { // Symbols
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},

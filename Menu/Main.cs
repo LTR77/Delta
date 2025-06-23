@@ -560,6 +560,9 @@ namespace GorillaX.Menu
 
             return null;
         }
+        public static bool IsPlayerLocal(VRRig Player) =>
+            Player == VRRig.LocalRig;
+        
 
         // Variables
             // Important
