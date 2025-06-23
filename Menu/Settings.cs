@@ -1,8 +1,8 @@
-﻿using StupidTemplate.Classes;
+﻿using GorillaX.Classes;
 using UnityEngine;
-using static StupidTemplate.Menu.Main;
+using static GorillaX.Menu.Main;
 
-namespace StupidTemplate
+namespace GorillaX
 {
     internal class Settings
     {

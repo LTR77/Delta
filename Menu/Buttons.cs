@@ -1,7 +1,6 @@
 ﻿using GorillaX.Mods;
-using StupidTemplate.Classes;
-using StupidTemplate.Mods;
-using static StupidTemplate.Settings;
+using GorillaX.Classes;
+using static GorillaX.Settings;
 
 namespace GorillaX.Menu
 {
@@ -10,13 +9,13 @@ namespace GorillaX.Menu
         public static ButtonInfo[][] buttons = new ButtonInfo[][]
         {
             new ButtonInfo[] { // Main Mods
-                new ButtonInfo { buttonText = "Symbols", method =() => SettingsMods.EnterSymbols(), isTogglable = false, toolTip = "Opens the Symbol meanings page for the menu"},
+                new ButtonInfo { buttonText = "Symbols", method =() => Global.EnterSymbols(), isTogglable = false, toolTip = "Opens the Symbol meanings page for the menu"},
                 new ButtonInfo { buttonText = "Settings", method =() => SettingsMods.EnterSettings(), isTogglable = false, toolTip = "Opens the main settings page for the menu."},
-                new ButtonInfo { buttonText = "Movement", method =() => SettingsMods.EnterMovement(), isTogglable = false, toolTip = "Opens the movement mods page for the menu."},
-                new ButtonInfo { buttonText = "Useful", method =() => SettingsMods.EnterUseful(), isTogglable = false, toolTip = "Opens the Useful mods page for the menu."},
+                new ButtonInfo { buttonText = "Movement", method =() => Global.EnterMovement(), isTogglable = false, toolTip = "Opens the movement mods page for the menu."},
+                new ButtonInfo { buttonText = "Useful", method =() => Global.EnterUseful(), isTogglable = false, toolTip = "Opens the Useful mods page for the menu."},
 
 
-                new ButtonInfo { buttonText = "OP Mods", method =() => SettingsMods.EnterOP(), isTogglable = false, toolTip = "Opens the Overpowered mods page for the menu."},
+                new ButtonInfo { buttonText = "OP Mods", method =() => Global.EnterOP(), isTogglable = false, toolTip = "Opens the Overpowered mods page for the menu."},
 
                 // new ButtonInfo { buttonText = "regular placeholder 6", isTogglable = false},
                 // new ButtonInfo { buttonText = "togglable placeholder 6"},
@@ -33,7 +32,7 @@ namespace GorillaX.Menu
 
             new ButtonInfo[] { // Menu Settings
                 new ButtonInfo { buttonText = "Return to Settings", method =() => SettingsMods.EnterSettings(), isTogglable = false, toolTip = "Returns to the main settings page for the menu."},
-                new ButtonInfo { buttonText = "Change Fade Color", method =() => SettingsMods.EnterSettings(), isTogglable = false, toolTip = "Returns to the main settings page for the menu."},
+                new ButtonInfo { buttonText = ColorCustom.ColorString, method =() => SettingsMods.EnterSettings(), isTogglable = false, toolTip = "Returns to the main settings page for the menu."},
                 new ButtonInfo { buttonText = "Rainbow", method =() =>SettingsMods.SetRainbow(), isTogglable = false, toolTip = "sets the menu color to rainbow" },
                 new ButtonInfo { buttonText = "Right Hand", enableMethod =() => SettingsMods.RightHand(), disableMethod =() => SettingsMods.LeftHand(), toolTip = "Puts the menu on your right hand."},
                 new ButtonInfo { buttonText = "Notifications", enableMethod =() => SettingsMods.EnableNotifications(), disableMethod =() => SettingsMods.DisableNotifications(), enabled = !disableNotifications, toolTip = "Toggles the notifications."},
@@ -83,7 +82,6 @@ namespace GorillaX.Menu
             new ButtonInfo[] { // Useful Mods
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
                 new ButtonInfo { buttonText = "Accept TOS", method =() => Useful.AcceptTOSMod(), isTogglable = false, toolTip = "Accepts the annoying ass tos"},
-
             }
         };
     }

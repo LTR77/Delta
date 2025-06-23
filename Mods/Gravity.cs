@@ -21,7 +21,7 @@ namespace GorillaX.Mods
         }
         public static void BackwardsGravityMod()
         {
-            GorillaTagger.Instance.rigidbody.AddForce(Vector3.back * 13.165f, ForceMode.Acceleration);
+            GorillaTagger.Instance.rigidbody.AddForce(Vector3.down * 13.165f, ForceMode.Acceleration);
         }
     }
 }

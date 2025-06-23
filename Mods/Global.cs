@@ -1,4 +1,4 @@
-﻿using static StupidTemplate.Menu.Main;
+﻿using static GorillaX.Menu.Main;
 
 namespace GorillaX.Mods
 {
@@ -7,6 +7,22 @@ namespace GorillaX.Mods
         public static void ReturnHome()
         {
             buttonsType = 0;
+        }
+        public static void EnterSymbols()
+        {
+            buttonsType = 5;
+        }
+        public static void EnterOP()
+        {
+            buttonsType = 6;
+        }
+        public static void EnterUseful()
+        {
+            buttonsType = 7;
+        }
+        public static void EnterMovement()
+        {
+            buttonsType = 4;
         }
     }
 }

@@ -2,7 +2,7 @@
 using HarmonyLib;
 using UnityEngine;
 
-namespace StupidTemplate.Patches
+namespace GorillaX.Patches
 {
     public class Menu : MonoBehaviour
     {
@@ -14,7 +14,7 @@ namespace StupidTemplate.Patches
             {
                 if (instance == null)
                 {
-                    instance = new Harmony(StupidTemplate.PluginInfo.GUID);
+                    instance = new Harmony(GorillaX.PluginInfo.GUID);
                 }
                 instance.PatchAll(Assembly.GetExecutingAssembly());
                 IsPatched = true;

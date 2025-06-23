@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using static StupidTemplate.Menu.Main;
-using static StupidTemplate.Settings;
+using static GorillaX.Menu.Main;
+using static GorillaX.Settings;
 
-namespace StupidTemplate.Mods
+namespace GorillaX.Mods
 
 
 {
@@ -13,34 +13,14 @@ namespace StupidTemplate.Mods
         {
             buttonsType = 1;
         }
-
         public static void MenuSettings()
         {
             buttonsType = 2;
         }
-
         public static void MovementSettings()
         {
             buttonsType = 3;
         }
-        public static void EnterMovement()
-        {
-            buttonsType = 4;
-        }
-        public static void EnterSymbols()
-        {
-            buttonsType = 5;
-        }
-        public static void EnterOP()
-        {
-            buttonsType = 6;
-        }
-        public static void EnterUseful()
-        {
-            buttonsType = 7;
-        }
-
-
 
         public static void RightHand()
         {
@@ -101,17 +81,48 @@ namespace GorillaX.Classes
 {
     internal class ColorCustom
     {
+        public static string ColorString = "magenta";
+        public static Color UseableColor;
         public static void ChangeFaidToColorMod()
         {
             Color[] colors = { Color.red, Color.green, Color.blue, Color.yellow, Color.cyan, Color.magenta };
+
             int ColorCycler = 0;
-            ColorCycler += 1;
+            ColorCycler++;
+            UseableColor = colors[ColorCycler];
+
+            if(UseableColor == Color.red) 
+            {
+                ColorString = "red";
+            }
+            else if (UseableColor == Color.green)
+            {
+                ColorString = "green";
+            }
+            else if (UseableColor == Color.blue)
+            {
+                ColorString = "blue";
+            }
+            else if (UseableColor == Color.yellow)
+            {
+                ColorString = "yellow";
+            }
+            else if (UseableColor == Color.cyan)
+            {
+                ColorString = "cyan";
+            }
+            else if (UseableColor == Color.magenta)
+            {
+                ColorString = "magenta";
+            }
+
+
             if (ColorCycler >= colors.Length)
             {
                 ColorCycler = 0;
             }
-
         }
     }
 }
+
 

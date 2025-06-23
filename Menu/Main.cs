@@ -1,17 +1,17 @@
 ﻿using BepInEx;
 using GorillaX.Menu;
 using HarmonyLib;
-using StupidTemplate.Classes;
-using StupidTemplate.Notifications;
+using GorillaX.Classes;
+using GorillaX.Notifications;
 using System;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using static GorillaX.Menu.Buttons;
-using static StupidTemplate.Settings;
+using static GorillaX.Settings;
 
-namespace StupidTemplate.Menu
+namespace GorillaX.Menu
 {
     [HarmonyPatch(typeof(GorillaLocomotion.GTPlayer))]
     [HarmonyPatch("LateUpdate", MethodType.Normal)]

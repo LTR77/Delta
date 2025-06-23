@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace StupidTemplate.Mods
+namespace GorillaX.Mods
 {
     internal class SpeedBoost
     {

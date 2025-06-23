@@ -1,12 +1,12 @@
 ﻿using HarmonyLib;
-using StupidTemplate.Notifications;
+using GorillaX.Notifications;
 using Photon.Pun;
 using Photon.Realtime;
 using System.IO;
 using UnityEngine;
-using static StupidTemplate.Menu.Main;
+using static GorillaX.Menu.Main;
 
-namespace StupidTemplate.Patches
+namespace GorillaX.Patches
 {
     [HarmonyPatch(typeof(MonoBehaviourPunCallbacks), "OnPlayerEnteredRoom")]
     internal class JoinPatch : MonoBehaviour

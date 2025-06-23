@@ -1,9 +1,9 @@
 using Photon.Pun;
 using UnityEngine;
-using static StupidTemplate.Menu.Main;
-using static StupidTemplate.Settings;
+using static GorillaX.Menu.Main;
+using static GorillaX.Settings;
 
-namespace StupidTemplate.Classes
+namespace GorillaX.Classes
 {
 	internal class Button : MonoBehaviour
 	{

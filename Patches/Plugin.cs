@@ -1,10 +1,10 @@
 ﻿using BepInEx;
 using System.ComponentModel;
 
-namespace StupidTemplate.Patches
+namespace GorillaX.Patches
 {
-    [Description(StupidTemplate.PluginInfo.Description)]
-    [BepInPlugin(StupidTemplate.PluginInfo.GUID, StupidTemplate.PluginInfo.Name, StupidTemplate.PluginInfo.Version)]
+    [Description(GorillaX.PluginInfo.Description)]
+    [BepInPlugin(GorillaX.PluginInfo.GUID, GorillaX.PluginInfo.Name, GorillaX.PluginInfo.Version)]
     public class HarmonyPatches : BaseUnityPlugin
     {
         private void OnEnable()
