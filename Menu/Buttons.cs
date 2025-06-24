@@ -14,6 +14,8 @@ namespace GorillaX.Menu
                 new ButtonInfo { buttonText = "Settings", method =() => SettingsMods.EnterSettings(), isTogglable = false, toolTip = "Opens the main settings page for the menu."},
                 new ButtonInfo { buttonText = "Movement", method =() => Global.EnterMovement(), isTogglable = false, toolTip = "Opens the movement mods page for the menu."},
                 new ButtonInfo { buttonText = "Useful", method =() => Global.EnterUseful(), isTogglable = false, toolTip = "Opens the Useful mods page for the menu."},
+                new ButtonInfo { buttonText = "Visual", method =() => Global.EnterVisual(), isTogglable = false, toolTip = "Opens the Visual mods page for the menu."},
+
 
                 new ButtonInfo { buttonText = "OP Mods", method =() => Global.EnterOP(), isTogglable = false, toolTip = "Opens the Overpowered mods page for the menu."},
 

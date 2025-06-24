@@ -24,5 +24,9 @@ namespace GorillaX.Mods
         {
             buttonsType = 4;
         }
+        public static void EnterVisual()
+        {
+            buttonsType = 8;
+        }
     }
 }
