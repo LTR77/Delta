@@ -9,20 +9,17 @@ namespace GorillaX.Menu
         public static ButtonInfo[][] buttons = new ButtonInfo[][]
         {
             new ButtonInfo[] { // Main Mods
+                new ButtonInfo { buttonText = "Try to Update", method =() => AutoUpd.AutoUpdater.Start(), isTogglable = false, toolTip = "Trys to Update the mod menu"},
                 new ButtonInfo { buttonText = "Symbols", method =() => Global.EnterSymbols(), isTogglable = false, toolTip = "Opens the Symbol meanings page for the menu"},
                 new ButtonInfo { buttonText = "Settings", method =() => SettingsMods.EnterSettings(), isTogglable = false, toolTip = "Opens the main settings page for the menu."},
                 new ButtonInfo { buttonText = "Movement", method =() => Global.EnterMovement(), isTogglable = false, toolTip = "Opens the movement mods page for the menu."},
                 new ButtonInfo { buttonText = "Useful", method =() => Global.EnterUseful(), isTogglable = false, toolTip = "Opens the Useful mods page for the menu."},
 
-
                 new ButtonInfo { buttonText = "OP Mods", method =() => Global.EnterOP(), isTogglable = false, toolTip = "Opens the Overpowered mods page for the menu."},
 
                 // new ButtonInfo { buttonText = "regular placeholder 6", isTogglable = false},
                 // new ButtonInfo { buttonText = "togglable placeholder 6"},
-
             },
-
-
 
             new ButtonInfo[] { // Settings
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
@@ -57,7 +54,7 @@ namespace GorillaX.Menu
                 new ButtonInfo { buttonText = "Backwards Gravity [UND] [W]", method =() => Gravity.BackwardsGravityMod(), isTogglable = true, toolTip = "Backwards Gravity (you fly up)"},
                 new ButtonInfo { buttonText = "Cursed TP Gun [UND?] [SW]", method =() => TPGun.TPGunMod(), isTogglable = true, toolTip = "Ass Teleport Gun Probs D"},
                 new ButtonInfo { buttonText = "Noclip [UND] [W]", method =() => SuperBasicMods.NoclipNod(), isTogglable = true, toolTip = "Go Through Walls!"},
-                new ButtonInfo { buttonText = "Platforms [UND] [W]", method =() => SuperBasicMods.PlatformsMod(), isTogglable = true, toolTip = "Good ol' Platforms"},
+                new ButtonInfo { buttonText = "Platforms [UND] [W]", method =() => Platforms.platformMOD(), isTogglable = true, toolTip = "Good ol' Platforms"},
             },
             new ButtonInfo[] { // Symbols
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
@@ -79,12 +76,16 @@ namespace GorillaX.Menu
             },
             new ButtonInfo[] {               // OP Mods
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
-                new ButtonInfo { buttonText = "PlaceHolder", method =() => OP.UnlockCosmeticsMod(), isTogglable = false, toolTip = "Unlocks all cosmetics in the game.NOT WORKING"},
 
             },
             new ButtonInfo[] { // Useful Mods
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
                 new ButtonInfo { buttonText = "Accept TOS", method =() => Useful.AcceptTOSMod(), isTogglable = false, toolTip = "Accepts the annoying ass tos"},
+            },
+            new ButtonInfo[] // Visual
+            {
+                new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
+                new ButtonInfo { buttonText = "Tracers", method =() => Tracer.TracersMod(), isTogglable = true, toolTip = "Enables Tracers to everybody"},
             }
         };
     }

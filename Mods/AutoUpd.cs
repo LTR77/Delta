@@ -12,14 +12,14 @@ namespace GorillaX.Mods
     {
         public class AutoUpdater : MonoBehaviour
         {
-            private string versionUrl = "https://yourserver.com/version.txt";
-            private string downloadUrl = "https://github.com/LTR77/GorillaX/releases/download/0.1/GorillaX.dll";
-            private string dllPath = "C:/Program Files (x86)/Steam/steamapps/common/Gorilla Tag/GorillaX.dll";
-            void Start()
+            private static string versionUrl = "https://raw.githubusercontent.com/LTR77/GorillaX/refs/heads/master/version.txt";
+            private static string downloadUrl = "https://github.com/LTR77/GorillaX/releases/download/0.1/GorillaX.dll";
+            private static string dllPath = "C:/Program Files (x86)/Steam/steamapps/common/Gorilla Tag/GorillaX.dll";
+            public static void Start()
             {
                 CheckForUpdates();
             }
-            async void CheckForUpdates()
+            async static void CheckForUpdates()
             {
                 try
                 {
