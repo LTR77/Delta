@@ -26,7 +26,7 @@ namespace GorillaX.Mods
             {
                 GunShootPointer = GameObject.CreatePrimitive(PrimitiveType.Sphere);
                 GunShootPointer.transform.position = hit.point;
-                GunShootPointer.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+                GunShootPointer.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
                 GunShootPointer.GetComponent<Renderer>().material.color = Color.green;
                 UnityEngine.Object.Destroy(GunShootPointer, 0.01f);
             }

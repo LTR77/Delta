@@ -10,7 +10,7 @@ namespace GorillaX.Classes
         {
             new GradientColorKey(Color.black, 0f),
             //new GradientColorKey(Color.magenta, 0.5f),
-            new GradientColorKey(ColorCustom.UseableColor, 0.5f),
+            new GradientColorKey(ColorCustom.TempUseableColor, 0.5f),
             new GradientColorKey(Color.black, 1f)
         };
 

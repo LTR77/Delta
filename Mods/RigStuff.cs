@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine.InputSystem;
+using System.Threading.Tasks;
 
 namespace GorillaX.Mods
 {
@@ -10,15 +11,16 @@ namespace GorillaX.Mods
     {
         private static bool GMToggled = false;
         private static bool IMToggled = false;
-        public static void GhostMonkeyMod() 
+        public async static void GhostMonkeyMod() 
         {
             if(ControllerInputPoller.instance.leftControllerPrimaryButton || UnityInput.Current.GetKey(UnityEngine.KeyCode.Z))
             {
                 GMToggled = !GMToggled;
                 GorillaTagger.Instance.offlineVRRig.enabled = !GMToggled;
+                await Task.Delay(100);
             }
         }
-        public static void InvisMonkeyMod()
+        public async static void InvisMonkeyMod()
         {
             if (ControllerInputPoller.instance.leftControllerPrimaryButton || UnityInput.Current.GetKey(UnityEngine.KeyCode.X))
             {
@@ -28,6 +30,7 @@ namespace GorillaX.Mods
                 {
                     GorillaTagger.Instance.offlineVRRig.transform.position = new UnityEngine.Vector3(0, 0, 0);
                 }
+                await Task.Delay(100);
             }
         }
         public static void FixRig()

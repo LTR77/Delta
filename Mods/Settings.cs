@@ -83,6 +83,7 @@ namespace GorillaX.Classes
     {
         public static string ColorString = "magenta";
         public static Color UseableColor;
+        public static Color TempUseableColor = Color.red;
         public static void ChangeFaidToColorMod()
         {
             Color[] colors = { Color.red, Color.green, Color.blue, Color.yellow, Color.cyan, Color.magenta };

@@ -44,19 +44,25 @@ namespace GorillaX.Menu
 
             new ButtonInfo[] { // Movement Mods
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
-                new ButtonInfo { buttonText = "Speedboost [UND] [W]", method =() => SpeedBoost.SpeedBoostMod(), isTogglable = true, toolTip = "Toggle Speedboost."},
+                new ButtonInfo { buttonText = "Mosa Speedboost [UND] [W]", method =() => SpeedBoost.MosaSpeedBoostMod(), isTogglable = true, toolTip = "Slight Speedboost."},
+                new ButtonInfo { buttonText = "Fast Speedboost [UND] [W]", method =() => SpeedBoost.FastSpeedBoostMod(), isTogglable = true, toolTip = "fast Speedboost"},
+                new ButtonInfo { buttonText = "Very Fast Speedboost [UND] [W]", method =() => SpeedBoost.VeryFastSpeedBoostMod(), isTogglable = true, toolTip = "VERY Fast Speedboost."},
+                new ButtonInfo { buttonText = "Insane Speedboost [UND] [W]", method =() => SpeedBoost.InsaneSpeedBoostMod(), isTogglable = true, toolTip = "VERY VERY fast Speedboost"},
+                new ButtonInfo { buttonText = "Do Not Use Speedboost [UND] [W]", method =() => SpeedBoost.DoNotUseSpeedBoostMod(), isTogglable = true, toolTip = "You better not"},
+
                 new ButtonInfo { buttonText = "Fly [U] [W]", method =() => Fly.FlyMod(), isTogglable = true, toolTip = "Toggle Fly."},
                 new ButtonInfo { buttonText = "Bounce Fly [U] [SDT] [W]", method =() => Fly.SlingshotFlyMod(), isTogglable = true, toolTip = "Fly with a Twist."},
-                new ButtonInfo { buttonText = "Ghost Monkey [D] [SW]", method =() => RigStuff.GhostMonkeyMod(), isTogglable = true, toolTip = "Go outside of your Body"},
-                new ButtonInfo { buttonText = "Invis Monkey [D] [SW]", method =() => RigStuff.InvisMonkeyMod(), isTogglable = true, toolTip = "dissappear or something"},
+                new ButtonInfo { buttonText = "Ghost Monkey [UND?] [SW]", method =() => RigStuff.GhostMonkeyMod(), isTogglable = true, toolTip = "Go outside of your Body"},
+                new ButtonInfo { buttonText = "Invis Monkey [UND?] [SW]", method =() => RigStuff.InvisMonkeyMod(), isTogglable = true, toolTip = "dissappear or something"},
                 new ButtonInfo { buttonText = "Fix Rig [U] [W]", method =() => RigStuff.InvisMonkeyMod(), isTogglable = true, toolTip = "dissappear or something"},
                 new ButtonInfo { buttonText = "0 Gravity [UND] [W]", method =() => Gravity.ZeroGravityMod(), isTogglable = true, toolTip = "No Gravity"},
                 new ButtonInfo { buttonText = "Low Gravity [UND] [W]", method =() => Gravity.LowGravityMod(), isTogglable = true, toolTip = "Low Gravity"},
                 new ButtonInfo { buttonText = "High Gravity [UND] [W]", method =() => Gravity.HighGravityMod(), isTogglable = true, toolTip = "High Gravity"},
                 new ButtonInfo { buttonText = "Backwards Gravity [UND] [W]", method =() => Gravity.BackwardsGravityMod(), isTogglable = true, toolTip = "Backwards Gravity (you fly up)"},
                 new ButtonInfo { buttonText = "Cursed TP Gun [UND?] [SW]", method =() => TPGun.TPGunMod(), isTogglable = true, toolTip = "Ass Teleport Gun Probs D"},
-                new ButtonInfo { buttonText = "Noclip [UND] [W]", method =() => SuperBasicMods.NoclipNod(), isTogglable = true, toolTip = "Go Through Walls!"},
+                new ButtonInfo { buttonText = "Noclip [UND] [W]", method =() => Noclip.NoclipNod(), isTogglable = true, toolTip = "Go Through Walls!"},
                 new ButtonInfo { buttonText = "Platforms [UND] [W]", method =() => Platforms.platformMOD(), isTogglable = true, toolTip = "Good ol' Platforms"},
+                new ButtonInfo { buttonText = "Car Monkey [UND] [W]", method =() => CarMonkey.CarMonkeyMod(), isTogglable = true, toolTip = "Drive like a car"},
             },
             new ButtonInfo[] { // Symbols
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
@@ -87,6 +93,7 @@ namespace GorillaX.Menu
             {
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
                 new ButtonInfo { buttonText = "Tracers", method =() => Tracer.TracersMod(), isTogglable = true, toolTip = "Enables Tracers to everybody"},
+                new ButtonInfo { buttonText = "ESP", method =() => ESP.ESPMod(), isTogglable=true, toolTip = "ESP on Everybody"},
             }
         };
     }

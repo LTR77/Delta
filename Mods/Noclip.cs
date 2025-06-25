@@ -6,7 +6,7 @@ using UnityEngine.Rendering.Universal.Internal;
 
 namespace GorillaX.Mods
 {
-    internal class SuperBasicMods
+    internal class Noclip
     {
         public static void NoclipNod()
         {
