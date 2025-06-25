@@ -78,7 +78,6 @@ namespace GorillaX.Menu
             },
             new ButtonInfo[] {               // OP Mods
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
-                new ButtonInfo { buttonText = "Unlock Cosmetics [Cant Disable] [CS] [UND] [W]", method =() => UnlockCosmetics.UnlockCosmeticsMod(), isTogglable = false, toolTip = "Unlocks All Cosmetics in the game"},
             },
             new ButtonInfo[] { // Useful Mods
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
