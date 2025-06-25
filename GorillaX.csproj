@@ -612,4 +612,8 @@
       <HintPath>Libs\websocket-sharp.dll</HintPath>
     </Reference>
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Mods\Sounds\" />
+  </ItemGroup>
 </Project>
