@@ -14,7 +14,7 @@ namespace GorillaX.Mods
         {
             GameObject Platform = GameObject.CreatePrimitive(PrimitiveType.Cube);
             Platform.transform.localScale = new Vector3(0.025f, 0.3f, 0.4f);
-            Platform.transform.position = Handtransform.position + Vector3.down * 0.08f;
+            Platform.transform.position = Handtransform.position + Vector3.down * 0.06f;
             Platform.transform.rotation = Handtransform.rotation;
             Platform.GetComponent<Renderer>().material.color = color;
             return Platform;
