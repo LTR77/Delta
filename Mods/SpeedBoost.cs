@@ -13,8 +13,8 @@ namespace GorillaX.Mods
         }
         public static void MosaSpeedBoostMod()
         {
-            GorillaLocomotion.GTPlayer.Instance.maxJumpSpeed = 3f;
-            GorillaLocomotion.GTPlayer.Instance.jumpMultiplier = 3f;
+            GorillaLocomotion.GTPlayer.Instance.maxJumpSpeed = 6f;
+            GorillaLocomotion.GTPlayer.Instance.jumpMultiplier = 6f;
         }
         public static void VeryFastSpeedBoostMod()
         {
@@ -35,6 +35,11 @@ namespace GorillaX.Mods
         {
             GorillaLocomotion.GTPlayer.Instance.maxJumpSpeed = 550f;
             GorillaLocomotion.GTPlayer.Instance.jumpMultiplier = 550f;
+        }
+        public static void NoSpeedBoostMod()
+        {
+            GorillaLocomotion.GTPlayer.Instance.maxJumpSpeed = 1000f;
+            GorillaLocomotion.GTPlayer.Instance.jumpMultiplier = 1000f;
         }
     }
 }

@@ -11,7 +11,7 @@ namespace GorillaX.Mods
         public static AudioClip audioClip;
         public class SoundPlayer : MonoBehaviour
         {
-            public static void PlaySound(AudioClip clip, float volume = 1f)
+            public static void PlaySound(AudioClip clip, float volume = 10f)
             {
                 if (clip == null)
                 {
