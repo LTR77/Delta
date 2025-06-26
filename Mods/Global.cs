@@ -28,5 +28,9 @@ namespace GorillaX.Mods
         {
             buttonsType = 8;
         }
+        public static void EnterFun()
+        {
+            buttonsType = 9;
+        }
     }
 }

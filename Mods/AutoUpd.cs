@@ -13,7 +13,6 @@ namespace GorillaX.Mods
         public class AutoUpdater : MonoBehaviour
         { 
             private static string versionUrl = "https://raw.githubusercontent.com/LTR77/GorillaX/refs/heads/master/version.txt";
-            private static string downloadUrl = $"https://github.com/LTR77/GorillaX/releases/download/{PluginInfo.Version}/GorillaX.dll";
             private static string dllPath = Assembly.GetExecutingAssembly().Location;
             public static void Start()
             {
@@ -25,6 +24,7 @@ namespace GorillaX.Mods
                 {
                     using WebClient client = new WebClient();
                     string latestVersion = await client.DownloadStringTaskAsync(versionUrl);
+                    string downloadUrl = $"https://github.com/LTR77/GorillaX/releases/download/{latestVersion.Trim()}/GorillaX.dll";
 
                     if (latestVersion.Trim() != PluginInfo.Version)
                     {

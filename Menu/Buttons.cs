@@ -15,6 +15,7 @@ namespace GorillaX.Menu
                 new ButtonInfo { buttonText = "Movement", method =() => Global.EnterMovement(), isTogglable = false, toolTip = "Opens the movement mods page for the menu."},
                 new ButtonInfo { buttonText = "Useful", method =() => Global.EnterUseful(), isTogglable = false, toolTip = "Opens the Useful mods page for the menu."},
                 new ButtonInfo { buttonText = "Visual", method =() => Global.EnterVisual(), isTogglable = false, toolTip = "Opens the Visual mods page for the menu."},
+                new ButtonInfo { buttonText = "SDT", method =() => Global.EnterFun(), isTogglable = false, toolTip = "Opens the Fun mods page for the menu."},
 
 
                 new ButtonInfo { buttonText = "OP Mods", method =() => Global.EnterOP(), isTogglable = false, toolTip = "Opens the Overpowered mods page for the menu."},
@@ -49,9 +50,10 @@ namespace GorillaX.Menu
                 new ButtonInfo { buttonText = "Very Fast Speedboost [UND] [W]", method =() => SpeedBoost.VeryFastSpeedBoostMod(), isTogglable = true, toolTip = "VERY Fast Speedboost."},
                 new ButtonInfo { buttonText = "Insane Speedboost [UND] [W]", method =() => SpeedBoost.InsaneSpeedBoostMod(), isTogglable = true, toolTip = "VERY VERY fast Speedboost"},
                 new ButtonInfo { buttonText = "Do Not Use Speedboost [UND] [W]", method =() => SpeedBoost.DoNotUseSpeedBoostMod(), isTogglable = true, toolTip = "You better not"},
+                new ButtonInfo { buttonText = "Dont Even Try Speedboost [UND] [W]", method =() => SpeedBoost.DontEvenTrySpeedBoostMod(), isTogglable = true, toolTip = "You really shouldnt"},
 
                 new ButtonInfo { buttonText = "Fly [U] [W]", method =() => Fly.FlyMod(), isTogglable = true, toolTip = "Toggle Fly."},
-                new ButtonInfo { buttonText = "Bounce Fly [U] [SDT] [W]", method =() => Fly.SlingshotFlyMod(), isTogglable = true, toolTip = "Fly with a Twist."},
+              
                 new ButtonInfo { buttonText = "Ghost Monkey [UND?] [SW]", method =() => RigStuff.GhostMonkeyMod(), isTogglable = true, toolTip = "Go outside of your Body"},
                 new ButtonInfo { buttonText = "Invis Monkey [UND?] [SW]", method =() => RigStuff.InvisMonkeyMod(), isTogglable = true, toolTip = "dissappear or something"},
                 new ButtonInfo { buttonText = "Fix Rig [U] [W]", method =() => RigStuff.InvisMonkeyMod(), isTogglable = true, toolTip = "dissappear or something"},
@@ -94,6 +96,13 @@ namespace GorillaX.Menu
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
                 new ButtonInfo { buttonText = "Tracers", method =() => Tracer.TracersMod(), isTogglable = true, toolTip = "Enables Tracers to everybody"},
                 new ButtonInfo { buttonText = "ESP", method =() => ESP.ESPMod(), isTogglable=true, toolTip = "ESP on Everybody"},
+            },
+            new ButtonInfo[] // Super Duper Tank
+            {
+                new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
+                new ButtonInfo { buttonText = "Platforms Draw [UND] [CS] [W]", method =() => Platforms.PlatformDrawMod(), isTogglable = false, toolTip = "Draw with Platforms"},
+                new ButtonInfo { buttonText = "Story of Super Duper", method =() => StoryOfSuperDUper.SoundPlayer.PlaySound(StoryOfSuperDUper.audioClip), isTogglable = false, toolTip = "Play Story of SUper DUper"},
+                new ButtonInfo { buttonText = "Bounce Fly [U] [SDT] [W]", method =() => Fly.SlingshotFlyMod(), isTogglable = true, toolTip = "Fly with a Twist."},
             }
         };
     }

@@ -31,5 +31,10 @@ namespace GorillaX.Mods
             GorillaLocomotion.GTPlayer.Instance.maxJumpSpeed = 100f;
             GorillaLocomotion.GTPlayer.Instance.jumpMultiplier = 100f;
         }
+        public static void DontEvenTrySpeedBoostMod()
+        {
+            GorillaLocomotion.GTPlayer.Instance.maxJumpSpeed = 550f;
+            GorillaLocomotion.GTPlayer.Instance.jumpMultiplier = 550f;
+        }
     }
 }
