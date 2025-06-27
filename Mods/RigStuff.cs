@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine.InputSystem;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace GorillaX.Mods
 {
@@ -16,6 +17,7 @@ namespace GorillaX.Mods
             if(ControllerInputPoller.instance.leftControllerPrimaryButton || UnityInput.Current.GetKey(UnityEngine.KeyCode.Z))
             {
                 GMToggled = !GMToggled;
+                VRRig.LocalRig.enabled = !GMToggled;
                 GorillaTagger.Instance.offlineVRRig.enabled = !GMToggled;
                 await Task.Delay(100);
             }
@@ -25,10 +27,11 @@ namespace GorillaX.Mods
             if (ControllerInputPoller.instance.leftControllerPrimaryButton || UnityInput.Current.GetKey(UnityEngine.KeyCode.X))
             {
                 IMToggled = !IMToggled;
+                VRRig.LocalRig.enabled = !GMToggled;
                 GorillaTagger.Instance.offlineVRRig.enabled = !IMToggled;
                 if(IMToggled)
                 {
-                    GorillaTagger.Instance.offlineVRRig.transform.position = new UnityEngine.Vector3(0, 0, 0);
+                    GorillaTagger.Instance.offlineVRRig.transform.position = new Vector3(0f, 0f, 4949f);
                 }
                 await Task.Delay(100);
             }
@@ -38,6 +41,7 @@ namespace GorillaX.Mods
             GMToggled = false;
             IMToggled = false;
             GorillaTagger.Instance.offlineVRRig.enabled = true;
+            VRRig.LocalRig.enabled = true;
         }
     }
 }

@@ -1,10 +1,11 @@
 ﻿using GorillaX.Mods;
 using GorillaX.Classes;
 using static GorillaX.Settings;
+using UnityEngine;
 
 namespace GorillaX.Menu
 {
-    internal class Buttons
+    internal class Buttons : MonoBehaviour
     {
         public static ButtonInfo[][] buttons = new ButtonInfo[][]
         {
@@ -32,6 +33,7 @@ namespace GorillaX.Menu
 
             new ButtonInfo[] { // Menu Settings
                 new ButtonInfo { buttonText = "Return to Settings", method =() => SettingsMods.EnterSettings(), isTogglable = false, toolTip = "Returns to the main settings page for the menu."},
+                new ButtonInfo { buttonText = ColorCustom.ColorString, enableMethod =() => ColorCustom.ChangeFaidToColorMod(), isTogglable = false, toolTip = "Change Fade Color of the Menu"},
                 new ButtonInfo { buttonText = "Rainbow", method =() =>SettingsMods.SetRainbow(), isTogglable = false, toolTip = "sets the menu color to rainbow" },
                 new ButtonInfo { buttonText = "Right Hand", enableMethod =() => SettingsMods.RightHand(), disableMethod =() => SettingsMods.LeftHand(), toolTip = "Puts the menu on your right hand."},
                 new ButtonInfo { buttonText = "Notifications", enableMethod =() => SettingsMods.EnableNotifications(), disableMethod =() => SettingsMods.DisableNotifications(), enabled = !disableNotifications, toolTip = "Toggles the notifications."},
@@ -44,15 +46,8 @@ namespace GorillaX.Menu
             },
 
             new ButtonInfo[] { // Movement Mods
-                new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
-                new ButtonInfo { buttonText = "Mosa Speedboost [UND] [W]", method =() => SpeedBoost.MosaSpeedBoostMod(), isTogglable = true, toolTip = "Slight Speedboost."},
-                new ButtonInfo { buttonText = "Fast Speedboost [UND] [W]", method =() => SpeedBoost.FastSpeedBoostMod(), isTogglable = true, toolTip = "fast Speedboost"},
-                new ButtonInfo { buttonText = "Very Fast Speedboost [UND?] [W]", method =() => SpeedBoost.VeryFastSpeedBoostMod(), isTogglable = true, toolTip = "VERY Fast Speedboost."},
-                new ButtonInfo { buttonText = "Insane Speedboost [UND?] [W]", method =() => SpeedBoost.InsaneSpeedBoostMod(), isTogglable = true, toolTip = "VERY VERY fast Speedboost"},
-                new ButtonInfo { buttonText = "Do Not Use Speedboost [UND?] [W]", method =() => SpeedBoost.DoNotUseSpeedBoostMod(), isTogglable = true, toolTip = "You better not"},
-                new ButtonInfo { buttonText = "Dont Even Try Speedboost [UND?] [W]", method =() => SpeedBoost.DontEvenTrySpeedBoostMod(), isTogglable = true, toolTip = "You really shouldnt"},
-                new ButtonInfo { buttonText = "'no' Speedboost [UND?] [W]", method =() => SpeedBoost.NoSpeedBoostMod(), isTogglable = true, toolTip = "no, just no"},
 
+                new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
                 new ButtonInfo { buttonText = "Fly [U] [W]", method =() => Fly.FlyMod(), isTogglable = true, toolTip = "Toggle Fly."},
                 new ButtonInfo { buttonText = "Ghost Monkey [UND?] [SW]", method =() => RigStuff.GhostMonkeyMod(), isTogglable = true, toolTip = "Go outside of your Body"},
                 new ButtonInfo { buttonText = "Invis Monkey [UND?] [SW]", method =() => RigStuff.InvisMonkeyMod(), isTogglable = true, toolTip = "dissappear or something"},
@@ -101,8 +96,21 @@ namespace GorillaX.Menu
             {
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
                 new ButtonInfo { buttonText = "Platforms Draw [UND] [CS] [W]", method =() => Platforms.PlatformDrawMod(), isTogglable = true, toolTip = "Draw with Platforms"},
+                //new ButtonInfo { buttonText = "Download SOSD", method =() => StoryOfSuperDUper.Download(, "https://github.com/LTR77/GorillaX/raw/refs/heads/master/Mods/Sounds/ElevenLabs_2025-06-25T17_31_30_Wyatt-%20Wise%20Rustic%20Cowboy_pvc_sp100_s84_sb100_v3.mp3", "SOSD.mp3", "GorillaX/Sounds"), isTogglable = false, toolTip = "Download needed for Story of Super Duper to play"},
                 new ButtonInfo { buttonText = "Story of Super Duper", method =() => StoryOfSuperDUper.SoundPlayer.PlaySound(StoryOfSuperDUper.audioClip), isTogglable = false, toolTip = "Play Story of SUper DUper"},
                 new ButtonInfo { buttonText = "Bounce Fly [U] [SDT] [W]", method =() => Fly.SlingshotFlyMod(), isTogglable = true, toolTip = "Fly with a Twist."},
+            },
+            new ButtonInfo[] // Speedboost
+            {
+                new ButtonInfo { buttonText = "Return to Movement", method =() => Global.EnterMovement(), isTogglable = false, toolTip = "Returns to the Movement page of the menu."},
+                new ButtonInfo { buttonText = "Mosa Speedboost [UND] [W]", method =() => SpeedBoost.MosaSpeedBoostMod(), isTogglable = true, toolTip = "Slight Speedboost."},
+                new ButtonInfo { buttonText = "Fast Speedboost [UND] [W]", method =() => SpeedBoost.FastSpeedBoostMod(), isTogglable = true, toolTip = "fast Speedboost"},
+                new ButtonInfo { buttonText = "Very Fast Speedboost [UND?] [W]", method =() => SpeedBoost.VeryFastSpeedBoostMod(), isTogglable = true, toolTip = "VERY Fast Speedboost."},
+                new ButtonInfo { buttonText = "Insane Speedboost [UND?] [W]", method =() => SpeedBoost.InsaneSpeedBoostMod(), isTogglable = true, toolTip = "VERY VERY fast Speedboost"},
+                new ButtonInfo { buttonText = "Do Not Use Speedboost [UND?] [W]", method =() => SpeedBoost.DoNotUseSpeedBoostMod(), isTogglable = true, toolTip = "You better not"},
+                new ButtonInfo { buttonText = "Dont Even Try Speedboost [UND?] [W]", method =() => SpeedBoost.DontEvenTrySpeedBoostMod(), isTogglable = true, toolTip = "You really shouldnt"},
+                new ButtonInfo { buttonText = "'no' Speedboost [UND?] [W]", method =() => SpeedBoost.NoSpeedBoostMod(), isTogglable = true, toolTip = "no, just no"},
+
             }
         };
     }

@@ -81,8 +81,8 @@ namespace GorillaX.Classes
 {
     internal class ColorCustom
     {
-        public static string ColorString = "magenta";
-        public static Color UseableColor;
+        public static string ColorString = "Fade Color";
+        public static Color UseableColor = Color.red;
         public static Color TempUseableColor = Color.red;
         public static void ChangeFaidToColorMod()
         {
@@ -120,6 +120,7 @@ namespace GorillaX.Classes
 
             if (ColorCycler >= colors.Length)
             {
+                ColorString = "Fade Color";
                 ColorCycler = 0;
             }
         }

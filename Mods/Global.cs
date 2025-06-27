@@ -32,5 +32,9 @@ namespace GorillaX.Mods
         {
             buttonsType = 9;
         }
+        public static void EnterSpeedboosts()
+        {
+            buttonsType = 10;
+        }
     }
 }
