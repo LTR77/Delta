@@ -48,6 +48,7 @@ namespace GorillaX.Menu
             new ButtonInfo[] { // Movement Mods
 
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
+                new ButtonInfo { buttonText = "Spedboosts", method =() => Global.EnterSpeedboosts(), isTogglable = false, toolTip = "Opens the Speedboosts page for the menu"},
                 new ButtonInfo { buttonText = "Fly [U] [W]", method =() => Fly.FlyMod(), isTogglable = true, toolTip = "Toggle Fly."},
                 new ButtonInfo { buttonText = "Ghost Monkey [UND?] [SW]", method =() => RigStuff.GhostMonkeyMod(), isTogglable = true, toolTip = "Go outside of your Body"},
                 new ButtonInfo { buttonText = "Invis Monkey [UND?] [SW]", method =() => RigStuff.InvisMonkeyMod(), isTogglable = true, toolTip = "dissappear or something"},
