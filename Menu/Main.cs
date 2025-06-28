@@ -10,6 +10,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using static GorillaX.Menu.Buttons;
 using static GorillaX.Settings;
+using GorillaX.Mods;
 
 namespace GorillaX.Menu
 {
@@ -18,6 +19,11 @@ namespace GorillaX.Menu
     public class Main : MonoBehaviour
     {
         // Constant
+        void Awake()
+        {
+            IronMonkey.Load();
+        }
+
         public static void Prefix()
         {
             // Initialize Menu
