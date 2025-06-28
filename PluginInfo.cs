@@ -6,6 +6,6 @@
         public const string Name = "Ǥㄖ尺ⅼ⎳⎳ᗩ☓✌︎";
         // public const string Name = "GorillaX";
         public const string Description = "Created by @✞ B135 ✞ and @Royal999 with love <3";
-        public const string Version = "2.2.1";
+        public const string Version = "2.3.0";
     }
 }
