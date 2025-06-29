@@ -58,6 +58,10 @@ namespace GorillaX.Mods
         
         public static void IronMonkeyMod()
         {
+            if(fireprefabparticle == null)
+            {
+                Load();
+            }
             Vector3 FireSpawnPosititition = GorillaTagger.Instance.offlineVRRig.transform.position + Vector3.down * 0.5f;
             if(ControllerInputPoller.instance.rightGrab)
             {
