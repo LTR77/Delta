@@ -6,12 +6,12 @@ using UnityEngine;
 using BepInEx.Logging;
 using System.IO;
 using Photon.Pun;
+using GorillaX.Menu;
 
 namespace GorillaX.Mods
 {
     internal class IronMonkey
     {
-        private static readonly ManualLogSource Logger = BepInEx.Logging.Logger.CreateLogSource("IronMonkey");
         public static GameObject fireprefabparticle;
         /* CHATGPT HELPER THINGYGYGYYG
         public static void LogPossibleFireAssets()
@@ -38,6 +38,18 @@ namespace GorillaX.Mods
                 if (prefabPath != null)
                 {
                     fireprefabparticle = bundle.LoadAsset<GameObject>(prefabPath);
+                    for(int i = 0;i<50;i++)
+                    {
+                        Main.Logger.LogInfo($"Loaded fire prefab particle from: {prefabPath}");
+                    }
+                    break;
+                }
+                else
+                {
+                    for(int i = 0;i<50;i++)
+                    {
+                        Main.Logger.LogWarning("Failed");
+                    }
                     break;
                 }
             }
@@ -49,15 +61,15 @@ namespace GorillaX.Mods
             Vector3 FireSpawnPosititition = GorillaTagger.Instance.offlineVRRig.transform.position + Vector3.down * 0.5f;
             if(ControllerInputPoller.instance.rightGrab)
             {
-                GorillaTagger.Instance.rigidbody.AddForce(GorillaTagger.Instance.offlineVRRig.rightHandTransform.right * 8.0f, ForceMode.Acceleration);
-                var obj = UnityEngine.Object.Instantiate(fireprefabparticle, GorillaTagger.Instance.offlineVRRig.transform.position + Vector3.down * 0.5f, Quaternion.identity);
+                GorillaTagger.Instance.rigidbody.AddForce(GorillaTagger.Instance.rightHandTransform.right * 8.0f, ForceMode.Impulse);
+                var obj = UnityEngine.Object.Instantiate(fireprefabparticle, GorillaTagger.Instance.rightHandTransform.position + Vector3.down * 0.5f, Quaternion.identity);
                 var particleSystem = obj.GetComponent<ParticleSystem>();
                 particleSystem.Play();
                 UnityEngine.Object.Destroy(obj, particleSystem.main.duration + particleSystem.main.startLifetime.constantMax);
             }
             if(ControllerInputPoller.instance.leftGrab)
             {
-                GorillaTagger.Instance.rigidbody.AddForce(GorillaTagger.Instance.leftHandTransform.right * 8.0f, ForceMode.Acceleration);
+                GorillaTagger.Instance.rigidbody.AddForce(GorillaTagger.Instance.leftHandTransform.right * 8.0f, ForceMode.Impulse);
                 var obj = UnityEngine.Object.Instantiate(fireprefabparticle, GorillaTagger.Instance.offlineVRRig.transform.position + Vector3.down * 0.5f, Quaternion.identity);
                 var particleSystem = obj.GetComponent<ParticleSystem>();
                 particleSystem.Play();

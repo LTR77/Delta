@@ -1,16 +1,18 @@
 ﻿using BepInEx;
-using GorillaX.Menu;
-using HarmonyLib;
+using BepInEx.Logging;
 using GorillaX.Classes;
+using GorillaX.Menu;
+using GorillaX.Mods;
 using GorillaX.Notifications;
+using HarmonyLib;
 using System;
 using System.Linq;
+using System.Reflection;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using static GorillaX.Menu.Buttons;
 using static GorillaX.Settings;
-using GorillaX.Mods;
 
 namespace GorillaX.Menu
 {
@@ -18,12 +20,8 @@ namespace GorillaX.Menu
     [HarmonyPatch("LateUpdate", MethodType.Normal)]
     public class Main : MonoBehaviour
     {
+        public static readonly ManualLogSource Logger = BepInEx.Logging.Logger.CreateLogSource("GorilaX");
         // Constant
-        void Awake()
-        {
-            IronMonkey.Load();
-        }
-
         public static void Prefix()
         {
             // Initialize Menu
