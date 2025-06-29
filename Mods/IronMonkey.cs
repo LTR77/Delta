@@ -30,7 +30,7 @@ namespace GorillaX.Mods
         */
         public static void Load()
         {
-            string bundlePath = Path.Combine(Application.dataPath, "StreamingAssets/aa/WindowsStandalone64");
+            string bundlePath = Path.Combine(Application.dataPath, "StreamingAssets/aa/StandaloneWindows64");
             foreach (var path in Directory.GetFiles(bundlePath, "*.bundle"))
             {
                 var bundle = AssetBundle.LoadFromFile(path);
@@ -61,6 +61,7 @@ namespace GorillaX.Mods
             if(fireprefabparticle == null)
             {
                 Load();
+                Main.Logger.LogInfo("Loadededededed!!!!");
             }
             Vector3 FireSpawnPosititition = GorillaTagger.Instance.offlineVRRig.transform.position + Vector3.down * 0.5f;
             if(ControllerInputPoller.instance.rightGrab)
