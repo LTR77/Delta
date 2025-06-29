@@ -48,11 +48,11 @@ namespace GorillaX.Menu
             new ButtonInfo[] { // Movement Mods
 
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
-                new ButtonInfo { buttonText = "Spedboosts", method =() => Global.EnterSpeedboosts(), isTogglable = false, toolTip = "Opens the Speedboosts page for the menu"},
-                new ButtonInfo { buttonText = "Fly [U] [W]", method =() => Fly.FlyMod(), isTogglable = true, toolTip = "Toggle Fly."},
-                new ButtonInfo { buttonText = "Ghost Monkey [UND?] [SW]", method =() => RigStuff.GhostMonkeyMod(), isTogglable = true, toolTip = "Go outside of your Body"},
-                new ButtonInfo { buttonText = "Invis Monkey [UND?] [SW]", method =() => RigStuff.InvisMonkeyMod(), isTogglable = true, toolTip = "dissappear or something"},
-                new ButtonInfo { buttonText = "Fix Rig [U] [W]", method =() => RigStuff.InvisMonkeyMod(), isTogglable = true, toolTip = "dissappear or something"},
+                new ButtonInfo { buttonText = "Speedboosts", method =() => Global.EnterSpeedboosts(), isTogglable = false, toolTip = "Opens the Speedboosts page for the menu"},
+                new ButtonInfo { buttonText = "Fly [UND] [W]", method =() => Fly.FlyMod(), isTogglable = true, toolTip = "Toggle Fly."},
+                new ButtonInfo { buttonText = "Ghost Monkey [UND] [SW]", method =() => RigStuff.GhostMonkeyMod(), isTogglable = true, toolTip = "Go outside of your Body"},
+                new ButtonInfo { buttonText = "Invis Monkey [UND] [SW]", method =() => RigStuff.InvisMonkeyMod(), isTogglable = true, toolTip = "disappear or something"},
+                new ButtonInfo { buttonText = "Fix Rig [UND] [W]", method =() => RigStuff.InvisMonkeyMod(), isTogglable = true, toolTip = "disappear or something"},
                 new ButtonInfo { buttonText = "0 Gravity [UND] [W]", method =() => Gravity.ZeroGravityMod(), isTogglable = true, toolTip = "No Gravity"},
                 new ButtonInfo { buttonText = "Low Gravity [UND] [W]", method =() => Gravity.LowGravityMod(), isTogglable = true, toolTip = "Low Gravity"},
                 new ButtonInfo { buttonText = "High Gravity [UND] [W]", method =() => Gravity.HighGravityMod(), isTogglable = true, toolTip = "High Gravity"},
@@ -62,6 +62,7 @@ namespace GorillaX.Menu
                 new ButtonInfo { buttonText = "Platforms [UND] [W]", method =() => Platforms.platformMOD(), isTogglable = true, toolTip = "Good ol' Platforms"},
                 new ButtonInfo { buttonText = "Car Monkey [UND] [W]", method =() => CarMonkey.CarMonkeyMod(), isTogglable = true, toolTip = "Drive like a car"},
                 new ButtonInfo { buttonText = "Iron Monkey [UND] [W]", method =() => IronMonkey.IronMonkeyMod(), isTogglable = true, toolTip = "Become ------ Iron Man"},
+                new ButtonInfo { buttonText = "Frozone [UND] [W]", method =() => Platforms.Frozone(), isTogglable = true, toolTip = "Frozone"},
             },
             new ButtonInfo[] { // Symbols
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
@@ -86,7 +87,8 @@ namespace GorillaX.Menu
             },
             new ButtonInfo[] { // Useful Mods
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
-                new ButtonInfo { buttonText = "Accept TOS", method =() => Useful.AcceptTOSMod(), isTogglable = false, toolTip = "Accepts the annoying ass tos"},
+                new ButtonInfo { buttonText = "Accept TOS [NW]", method =() => Useful.AcceptTOSMod(), isTogglable = false, toolTip = "Accepts the annoying ass tos"},
+                new ButtonInfo { buttonText = "Anti Report [UND] [W]", method =() => AntiReport.AntiReportMod(), isTogglable = false, toolTip = "anti report thingymaboboobobo"},
             },
             new ButtonInfo[] // Visual
             {
@@ -112,7 +114,6 @@ namespace GorillaX.Menu
                 new ButtonInfo { buttonText = "Do Not Use Speedboost [UND?] [W]", method =() => SpeedBoost.DoNotUseSpeedBoostMod(), isTogglable = true, toolTip = "You better not"},
                 new ButtonInfo { buttonText = "Dont Even Try Speedboost [UND?] [W]", method =() => SpeedBoost.DontEvenTrySpeedBoostMod(), isTogglable = true, toolTip = "You really shouldnt"},
                 new ButtonInfo { buttonText = "'no' Speedboost [UND?] [W]", method =() => SpeedBoost.NoSpeedBoostMod(), isTogglable = true, toolTip = "no, just no"},
-
             }
         };
     }

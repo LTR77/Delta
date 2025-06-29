@@ -10,11 +10,12 @@ namespace GorillaX.Mods
     {
         private static GameObject leftPlat = null;
         private static GameObject rightPlat = null;
-        private static GameObject CreatePlatformsOnHands(Transform Handtransform, Color color, bool DelAll)
+        private static GameObject CreatePlatformsOnHands(Transform Handtransform, Color color, bool DelAll, bool Slippery)
+
         {
             GameObject Platform = GameObject.CreatePrimitive(PrimitiveType.Cube);
             Platform.transform.localScale = new Vector3(0.025f, 0.3f, 0.4f);
-            Platform.transform.position = Handtransform.position + Vector3.down * 0.05f;
+            Platform.transform.position = Handtransform.position + Vector3.down * 0.04f;
             Platform.transform.rotation = Handtransform.rotation;
             Platform.GetComponent<Renderer>().material.color = color;
             if(DelAll)
@@ -26,17 +27,22 @@ namespace GorillaX.Mods
                 }
                 return null;
             }
+            if(Slippery)
+            {
+                Platform.AddComponent<GorillaSurfaceOverride>().overrideIndex = 61;
+                UnityEngine.Object.Destroy(Platform, 1.0f);
+            }
             return Platform;
         }
         public static void platformMOD()
         { 
             if(ControllerInputPoller.instance.rightGrab && rightPlat == null)
             {
-                rightPlat = CreatePlatformsOnHands(GorillaTagger.Instance.rightHandTransform, Color.red, false);
+                rightPlat = CreatePlatformsOnHands(GorillaTagger.Instance.rightHandTransform, Color.red, false, false);
             }
             if(ControllerInputPoller.instance.leftGrab && leftPlat == null)
             {
-                leftPlat = CreatePlatformsOnHands(GorillaTagger.Instance.leftHandTransform, Color.black, false);
+                leftPlat = CreatePlatformsOnHands(GorillaTagger.Instance.leftHandTransform, Color.black, false, false);
             }
             if(ControllerInputPoller.instance.rightGrabRelease && rightPlat != null)
             {
@@ -53,15 +59,30 @@ namespace GorillaX.Mods
         {
             if(ControllerInputPoller.instance.rightGrab)
             {
-                CreatePlatformsOnHands(GorillaTagger.Instance.rightHandTransform, Color.red, false);
+                CreatePlatformsOnHands(GorillaTagger.Instance.rightHandTransform, Color.red, false, false);
             }
             if(ControllerInputPoller.instance.leftGrab)
             {
-                CreatePlatformsOnHands(GorillaTagger.Instance.leftHandTransform, Color.black, false);
+                CreatePlatformsOnHands(GorillaTagger.Instance.leftHandTransform, Color.black, false, false);
             }
             if(ControllerInputPoller.instance.leftControllerSecondaryButton)
             {
-                CreatePlatformsOnHands(GorillaTagger.Instance.leftHandTransform, Color.white, true);
+                CreatePlatformsOnHands(GorillaTagger.Instance.leftHandTransform, Color.white, true, false);
+            }
+        }
+        public static void Frozone()
+        {
+            if(ControllerInputPoller.instance.rightGrab)
+            {
+                CreatePlatformsOnHands(GorillaTagger.Instance.rightHandTransform, Color.blue, false, true);
+            }
+            if (ControllerInputPoller.instance.leftGrab)
+            {
+                CreatePlatformsOnHands(GorillaTagger.Instance.leftHandTransform, Color.blue, false, true);
+            }
+            if(ControllerInputPoller.instance.leftControllerSecondaryButton)
+            {
+                CreatePlatformsOnHands(GorillaTagger.Instance.leftHandTransform, Color.white, true, false);
             }
         }
     }

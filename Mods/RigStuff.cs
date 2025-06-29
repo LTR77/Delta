@@ -10,38 +10,35 @@ namespace GorillaX.Mods
 {
     internal class RigStuff
     {
-        private static bool GMToggled = false;
-        private static bool IMToggled = false;
-        public async static void GhostMonkeyMod() 
+        private static bool GhostMonkeyToggled = false;
+        private static bool InvisMonkeyToggled = false;
+
+        public static void GhostMonkeyMod()
         {
-            if(ControllerInputPoller.instance.leftControllerPrimaryButton || UnityInput.Current.GetKey(UnityEngine.KeyCode.Z))
+            if(ControllerInputPoller.instance.leftControllerSecondaryButton)
             {
-                GMToggled = !GMToggled;
-                VRRig.LocalRig.enabled = !GMToggled;
-                GorillaTagger.Instance.offlineVRRig.enabled = !GMToggled;
-                await Task.Delay(100);
+                GorillaTagger.Instance.offlineVRRig.enabled = false;
+            }
+            else
+            {
+                GorillaTagger.Instance.offlineVRRig.enabled = true;
             }
         }
-        public async static void InvisMonkeyMod()
+        public static void InvisMonkeyMod()
         {
-            if (ControllerInputPoller.instance.leftControllerPrimaryButton || UnityInput.Current.GetKey(UnityEngine.KeyCode.X))
+            if(ControllerInputPoller.instance.rightControllerSecondaryButton)
             {
-                IMToggled = !IMToggled;
-                VRRig.LocalRig.enabled = !GMToggled;
-                GorillaTagger.Instance.offlineVRRig.enabled = !IMToggled;
-                if(IMToggled)
-                {
-                    GorillaTagger.Instance.offlineVRRig.transform.position = new Vector3(0f, 0f, 4949f);
-                }
-                await Task.Delay(100);
+                GorillaTagger.Instance.offlineVRRig.enabled = false;
+                GorillaTagger.Instance.offlineVRRig.transform.position = new Vector3(5555, 5555, 5555);
+            }
+            else
+            {
+                GorillaTagger.Instance.offlineVRRig.enabled = true;
             }
         }
         public static void FixRig()
         {
-            GMToggled = false;
-            IMToggled = false;
             GorillaTagger.Instance.offlineVRRig.enabled = true;
-            VRRig.LocalRig.enabled = true;
         }
     }
 }
