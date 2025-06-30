@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
+using GorillaX.Menu;
 
 namespace GorillaX.Mods
 {
@@ -12,6 +13,7 @@ namespace GorillaX.Mods
         {
             try
             {
+                Main.ProtectPlayerFromRPC(); 
                 foreach(GorillaPlayerScoreboardLine line in GorillaScoreboardTotalUpdater.allScoreboardLines)
                 {
                     Transform scoreboardTransform = line.reportButton.gameObject.transform;

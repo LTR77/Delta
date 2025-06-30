@@ -57,7 +57,7 @@ namespace GorillaX.Menu
                 new ButtonInfo { buttonText = "Low Gravity [UND] [W]", method =() => Gravity.LowGravityMod(), isTogglable = true, toolTip = "Low Gravity"},
                 new ButtonInfo { buttonText = "High Gravity [UND] [W]", method =() => Gravity.HighGravityMod(), isTogglable = true, toolTip = "High Gravity"},
                 new ButtonInfo { buttonText = "Backwards Gravity [UND] [W]", method =() => Gravity.BackwardsGravityMod(), isTogglable = true, toolTip = "Backwards Gravity (you fly up)"},
-                new ButtonInfo { buttonText = "Cursed TP Gun [UND?] [SW]", method =() => TPGun.TPGunMod(), isTogglable = true, toolTip = "Ass Teleport Gun Probs D"},
+                new ButtonInfo { buttonText = "TP Gun [UND?] [SW]", method =() => TPGun.TPGunMod(), isTogglable = true, toolTip = "Ass Teleport Gun Probs D"},
                 new ButtonInfo { buttonText = "Noclip [UND] [W]", method =() => Noclip.NoclipNod(), isTogglable = true, toolTip = "Go Through Walls!"},
                 new ButtonInfo { buttonText = "Platforms [UND] [W]", method =() => Platforms.platformMOD(), isTogglable = true, toolTip = "Good ol' Platforms"},
                 new ButtonInfo { buttonText = "Car Monkey [UND] [W]", method =() => CarMonkey.CarMonkeyMod(), isTogglable = true, toolTip = "Drive like a car"},
@@ -88,7 +88,7 @@ namespace GorillaX.Menu
             new ButtonInfo[] { // Useful Mods
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
                 new ButtonInfo { buttonText = "Accept TOS [NW]", method =() => Useful.AcceptTOSMod(), isTogglable = false, toolTip = "Accepts the annoying ass tos"},
-                new ButtonInfo { buttonText = "Anti Report [UND] [W]", method =() => AntiReport.AntiReportMod(), isTogglable = false, toolTip = "anti report thingymaboboobobo"},
+                new ButtonInfo { buttonText = "Anti Report [UND] [W]", enableMethod =() => AntiReport.AntiReportMod(), disableMethod =() => Main.DisableRPCProtect(), isTogglable = false, toolTip = "anti report thingymaboboobobo"},
             },
             new ButtonInfo[] // Visual
             {

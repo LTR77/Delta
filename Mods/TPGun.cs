@@ -19,7 +19,7 @@ namespace GorillaX.Mods
                 GameObject NewPointer = GunData.NewPointer;
                 if(ControllerInputPoller.instance.rightControllerIndexFloat > 0.2f || UnityInput.Current.GetKey(KeyCode.G) && NewPointer != null)
                 {
-                    GorillaLocomotion.GTPlayer.Instance.TeleportTo(NewPointer.transform.position, GorillaLocomotion.GTPlayer.Instance.transform.rotation);
+                    GorillaLocomotion.GTPlayer.Instance.transform.position = NewPointer.transform.position;
                     GorillaTagger.Instance.rigidbody.velocity = Vector3.zero;
                 }
             }

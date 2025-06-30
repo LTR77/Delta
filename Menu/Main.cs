@@ -5,6 +5,7 @@ using GorillaX.Menu;
 using GorillaX.Mods;
 using GorillaX.Notifications;
 using HarmonyLib;
+using Photon.Pun;
 using System;
 using System.Linq;
 using System.Reflection;
@@ -21,7 +22,29 @@ namespace GorillaX.Menu
     public class Main : MonoBehaviour
     {
         public static readonly ManualLogSource Logger = BepInEx.Logging.Logger.CreateLogSource("GorilaX");
+        public static bool RPCProtectCalledOnce = false;
         // Constant
+        public static void ProtectPlayerFromRPC()
+        {
+            try
+            {
+                if (!RPCProtectCalledOnce)
+                {
+                    RPCProtectCalledOnce = true;
+                    GorillaNot.instance.rpcErrorMax = int.MaxValue;
+                    GorillaNot.instance.logErrorMax = int.MaxValue;
+                    GorillaNot.instance.rpcCallLimit = int.MaxValue;
+                    PhotonNetwork.MaxResendsBeforeDisconnect = int.MaxValue;
+                    PhotonNetwork.QuickResends = int.MaxValue;
+                    PhotonNetwork.SendAllOutgoingCommands();
+                }
+            }
+            catch { Logger.LogWarning("Could not Protect you from RPCs"); }
+        }
+        public static void DisableRPCProtect()
+        {
+           RPCProtectCalledOnce = false;
+        }
         public static void Prefix()
         {
             // Initialize Menu
@@ -135,6 +158,7 @@ namespace GorillaX.Menu
                 colorChanger.colorInfo = backgroundColor;
                 colorChanger.Start();
 
+
             // Canvas
                 canvasObject = new GameObject();
                 canvasObject.transform.parent = menu.transform;
@@ -198,7 +222,7 @@ namespace GorillaX.Menu
                     if (disconnectButton)
                     {
                         GameObject disconnectbutton = GameObject.CreatePrimitive(PrimitiveType.Cube);
-                        if (!UnityInput.Current.GetKey(KeyCode.Q))
+                        if (!UnityInput.Current.GetKey(KeyCode.E))
                         {
                             disconnectbutton.layer = 2;
                         }
@@ -236,10 +260,11 @@ namespace GorillaX.Menu
                         rectt.localPosition = new Vector3(0.064f, 0f, 0.23f);
                         rectt.rotation = Quaternion.Euler(new Vector3(180f, 90f, 90f));
                     }
+                    // Home Button
 
-                // Page Buttons
+                    // Page Buttons
                     GameObject gameObject = GameObject.CreatePrimitive(PrimitiveType.Cube);
-                    if (!UnityInput.Current.GetKey(KeyCode.Q))
+                    if (!UnityInput.Current.GetKey(KeyCode.E))
                     {
                         gameObject.layer = 2;
                     }
@@ -277,7 +302,7 @@ namespace GorillaX.Menu
                     component.rotation = Quaternion.Euler(new Vector3(180f, 90f, 90f));
 
                     gameObject = GameObject.CreatePrimitive(PrimitiveType.Cube);
-                    if (!UnityInput.Current.GetKey(KeyCode.Q))
+                    if (!UnityInput.Current.GetKey(KeyCode.E))
                     {
                         gameObject.layer = 2;
                     }
@@ -325,7 +350,7 @@ namespace GorillaX.Menu
         public static void CreateButton(float offset, ButtonInfo method)
         {
             GameObject gameObject = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            if (!UnityInput.Current.GetKey(KeyCode.Q))
+            if (!UnityInput.Current.GetKey(KeyCode.E))
             {
                 gameObject.layer = 2;
             }
