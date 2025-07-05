@@ -50,8 +50,8 @@ namespace GorillaX.Menu
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
                 new ButtonInfo { buttonText = "Speedboosts", method =() => Global.EnterSpeedboosts(), isTogglable = false, toolTip = "Opens the Speedboosts page for the menu"},
                 new ButtonInfo { buttonText = "Fly [UND] [W]", method =() => Fly.FlyMod(), isTogglable = true, toolTip = "Toggle Fly."},
-                new ButtonInfo { buttonText = "Ghost Monkey [UND] [SW]", method =() => RigStuff.GhostMonkeyMod(), isTogglable = true, toolTip = "Go outside of your Body"},
-                new ButtonInfo { buttonText = "Invis Monkey [UND] [SW]", method =() => RigStuff.InvisMonkeyMod(), isTogglable = true, toolTip = "disappear or something"},
+                new ButtonInfo { buttonText = "Ghost Monkey [UND] [W]", method =() => RigStuff.GhostMonkeyMod(), isTogglable = true, toolTip = "Go outside of your Body"},
+                new ButtonInfo { buttonText = "Invis Monkey [UND] [W]", method =() => RigStuff.InvisMonkeyMod(), isTogglable = true, toolTip = "disappear or something"},
                 new ButtonInfo { buttonText = "Fix Rig [UND] [W]", method =() => RigStuff.InvisMonkeyMod(), isTogglable = true, toolTip = "disappear or something"},
                 new ButtonInfo { buttonText = "0 Gravity [UND] [W]", method =() => Gravity.ZeroGravityMod(), isTogglable = true, toolTip = "No Gravity"},
                 new ButtonInfo { buttonText = "Low Gravity [UND] [W]", method =() => Gravity.LowGravityMod(), isTogglable = true, toolTip = "Low Gravity"},
@@ -84,45 +84,26 @@ namespace GorillaX.Menu
             },
             new ButtonInfo[] {               // OP Mods
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
-<<<<<<< HEAD
-=======
                 new ButtonInfo { buttonText = "Water Hands", enableMethod =() => WaterSpammers.WaterHandsSpamMod(), disableMethod =() => RPCs.DisableRPCProtect(), isTogglable = true, toolTip = "Become water Benderr"},
->>>>>>> 6ef585f (added water mods)
             },
             new ButtonInfo[] { // Useful Mods
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
                 new ButtonInfo { buttonText = "Accept TOS [NW]", method =() => Useful.AcceptTOSMod(), isTogglable = false, toolTip = "Accepts the annoying ass tos"},
-<<<<<<< HEAD
-                new ButtonInfo { buttonText = "Anti Report [UND] [W]", enableMethod =() => AntiReport.AntiReportMod(), disableMethod =() => Main.DisableRPCProtect(), isTogglable = false, toolTip = "anti report thingymaboboobobo"},
-=======
                 new ButtonInfo { buttonText = "Anti Report [UND] [W]", enableMethod =() => AntiReport.AntiReportMod(), disableMethod =() => RPCs.DisableRPCProtect(), isTogglable = false, toolTip = "anti report thingymaboboobobo"},
->>>>>>> 6ef585f (added water mods)
             },
             new ButtonInfo[] // Visual
             {
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
-<<<<<<< HEAD
-                new ButtonInfo { buttonText = "Tracers", method =() => Tracer.TracersMod(), isTogglable = true, toolTip = "Enables Tracers to everybody"},
-                new ButtonInfo { buttonText = "ESP", method =() => ESP.ESPMod(), isTogglable=true, toolTip = "ESP on Everybody"},
-=======
-                new ButtonInfo { buttonText = "Tracers [W]", method =() => Tracer.TracersMod(), isTogglable = true, toolTip = "Enables Tracers to everybody"},
                 new ButtonInfo { buttonText = "ESP [W]", method =() => ESP.ESPMod(), isTogglable=true, toolTip = "ESP on Everybody"},
->>>>>>> 6ef585f (added water mods)
+                new ButtonInfo { buttonText = "Tracers [W]", method =() => Tracer.TracersMod(), isTogglable = true, toolTip = "Enables Tracers to everybody"},
             },
             new ButtonInfo[] // Super Duper Tank
             {
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
-<<<<<<< HEAD
                 new ButtonInfo { buttonText = "Platforms Draw [UND] [CS] [W]", method =() => Platforms.PlatformDrawMod(), isTogglable = true, toolTip = "Draw with Platforms"},
                 //new ButtonInfo { buttonText = "Download SOSD", method =() => StoryOfSuperDUper.Download(, "https://github.com/LTR77/GorillaX/raw/refs/heads/master/Mods/Sounds/ElevenLabs_2025-06-25T17_31_30_Wyatt-%20Wise%20Rustic%20Cowboy_pvc_sp100_s84_sb100_v3.mp3", "SOSD.mp3", "GorillaX/Sounds"), isTogglable = false, toolTip = "Download needed for Story of Super Duper to play"},
                 new ButtonInfo { buttonText = "Story of Super Duper", method =() => StoryOfSuperDUper.SoundPlayer.PlaySound(StoryOfSuperDUper.audioClip), isTogglable = false, toolTip = "Play Story of SUper DUper"},
-=======
-                new ButtonInfo { buttonText = "Platforms Draw [CS] [W]", method =() => Platforms.PlatformDrawMod(), isTogglable = true, toolTip = "Draw with Platforms"},
-                //new ButtonInfo { buttonText = "Download SOSD", method =() => StoryOfSuperDUper.Download(, "https://github.com/LTR77/GorillaX/raw/refs/heads/master/Mods/Sounds/ElevenLabs_2025-06-25T17_31_30_Wyatt-%20Wise%20Rustic%20Cowboy_pvc_sp100_s84_sb100_v3.mp3", "SOSD.mp3", "GorillaX/Sounds"), isTogglable = false, toolTip = "Download needed for Story of Super Duper to play"},
-                new ButtonInfo { buttonText = "Story of Super Duper [NW]", method =() => StoryOfSuperDUper.SoundPlayer.PlaySound(StoryOfSuperDUper.audioClip), isTogglable = false, toolTip = "Play Story of SUper DUper"},
->>>>>>> 6ef585f (added water mods)
-                new ButtonInfo { buttonText = "Bounce Fly [U] [SDT] [W]", method =() => Fly.SlingshotFlyMod(), isTogglable = true, toolTip = "Fly with a Twist."},
-            },
+	    },
             new ButtonInfo[] // Speedboost
             {
                 new ButtonInfo { buttonText = "Return to Movement", method =() => Global.EnterMovement(), isTogglable = false, toolTip = "Returns to the Movement page of the menu."},

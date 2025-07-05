@@ -22,35 +22,9 @@ namespace GorillaX.Menu
     public class Main : MonoBehaviour
     {
         public static readonly ManualLogSource Logger = BepInEx.Logging.Logger.CreateLogSource("GorilaX");
-<<<<<<< HEAD
-        public static bool RPCProtectCalledOnce = false;
-        // Constant
-        public static void ProtectPlayerFromRPC()
-        {
-            try
-            {
-                if (!RPCProtectCalledOnce)
-                {
-                    RPCProtectCalledOnce = true;
-                    GorillaNot.instance.rpcErrorMax = int.MaxValue;
-                    GorillaNot.instance.logErrorMax = int.MaxValue;
-                    GorillaNot.instance.rpcCallLimit = int.MaxValue;
-                    PhotonNetwork.MaxResendsBeforeDisconnect = int.MaxValue;
-                    PhotonNetwork.QuickResends = int.MaxValue;
-                    PhotonNetwork.SendAllOutgoingCommands();
-                }
-            }
-            catch { Logger.LogWarning("Could not Protect you from RPCs"); }
-        }
-        public static void DisableRPCProtect()
-        {
-           RPCProtectCalledOnce = false;
-        }
-=======
 
         // Constant
 
->>>>>>> 6ef585f (added water mods)
         public static void Prefix()
         {
             // Initialize Menu
