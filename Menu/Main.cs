@@ -22,6 +22,7 @@ namespace GorillaX.Menu
     public class Main : MonoBehaviour
     {
         public static readonly ManualLogSource Logger = BepInEx.Logging.Logger.CreateLogSource("GorilaX");
+<<<<<<< HEAD
         public static bool RPCProtectCalledOnce = false;
         // Constant
         public static void ProtectPlayerFromRPC()
@@ -45,6 +46,11 @@ namespace GorillaX.Menu
         {
            RPCProtectCalledOnce = false;
         }
+=======
+
+        // Constant
+
+>>>>>>> 6ef585f (added water mods)
         public static void Prefix()
         {
             // Initialize Menu

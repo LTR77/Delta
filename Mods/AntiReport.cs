@@ -13,7 +13,11 @@ namespace GorillaX.Mods
         {
             try
             {
+<<<<<<< HEAD
                 Main.ProtectPlayerFromRPC(); 
+=======
+                RPCs.ProtectPlayerFromRPC(); 
+>>>>>>> 6ef585f (added water mods)
                 foreach(GorillaPlayerScoreboardLine line in GorillaScoreboardTotalUpdater.allScoreboardLines)
                 {
                     Transform scoreboardTransform = line.reportButton.gameObject.transform;
