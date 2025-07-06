@@ -18,7 +18,6 @@ namespace GorillaX.Menu
                 new ButtonInfo { buttonText = "Visual", method =() => Global.EnterVisual(), isTogglable = false, toolTip = "Opens the Visual mods page for the menu."},
                 new ButtonInfo { buttonText = "SDT", method =() => Global.EnterFun(), isTogglable = false, toolTip = "Opens the Fun mods page for the menu."},
 
-
                 new ButtonInfo { buttonText = "OP Mods", method =() => Global.EnterOP(), isTogglable = false, toolTip = "Opens the Overpowered mods page for the menu."},
 
                 // new ButtonInfo { buttonText = "regular placeholder 6", isTogglable = false},
@@ -84,7 +83,8 @@ namespace GorillaX.Menu
             },
             new ButtonInfo[] {               // OP Mods
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
-                new ButtonInfo { buttonText = "Water Hands", enableMethod =() => WaterSpammers.WaterHandsSpamMod(), disableMethod =() => RPCs.DisableRPCProtect(), isTogglable = true, toolTip = "Become water Benderr"},
+                new ButtonInfo { buttonText = "Water Hands [W] [UND]", enableMethod =() => WaterSpammers.WaterHandsSpamMod(), disableMethod =() => RPCs.DisableRPCProtect(), isTogglable = true, toolTip = "Become water Benderr"},
+                new ButtonInfo { buttonText = "Water Gun [W?] [UND?]", method =() => WaterSpammers.WaterGunMod(), isTogglable = true, toolTip = "Water Spawns where Gun is shot"}
             },
             new ButtonInfo[] { // Useful Mods
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
