@@ -14,10 +14,10 @@ namespace GorillaX.Menu
                 new ButtonInfo { buttonText = "Symbols", method =() => Global.EnterSymbols(), isTogglable = false, toolTip = "Opens the Symbol meanings page for the menu"},
                 new ButtonInfo { buttonText = "Settings", method =() => SettingsMods.EnterSettings(), isTogglable = false, toolTip = "Opens the main settings page for the menu."},
                 new ButtonInfo { buttonText = "Movement", method =() => Global.EnterMovement(), isTogglable = false, toolTip = "Opens the movement mods page for the menu."},
+                new ButtonInfo {  buttonText = "VRRig", method =() => Global.EnterVRRig(), isTogglable = false, toolTip = "Opens the VRRig mods page for the menu."},
                 new ButtonInfo { buttonText = "Useful", method =() => Global.EnterUseful(), isTogglable = false, toolTip = "Opens the Useful mods page for the menu."},
                 new ButtonInfo { buttonText = "Visual", method =() => Global.EnterVisual(), isTogglable = false, toolTip = "Opens the Visual mods page for the menu."},
                 new ButtonInfo { buttonText = "SDT", method =() => Global.EnterFun(), isTogglable = false, toolTip = "Opens the Fun mods page for the menu."},
-
                 new ButtonInfo { buttonText = "OP Mods", method =() => Global.EnterOP(), isTogglable = false, toolTip = "Opens the Overpowered mods page for the menu."},
 
                 // new ButtonInfo { buttonText = "regular placeholder 6", isTogglable = false},
@@ -103,7 +103,7 @@ namespace GorillaX.Menu
                 new ButtonInfo { buttonText = "Platforms Draw [UND] [CS] [W]", method =() => Platforms.PlatformDrawMod(), isTogglable = true, toolTip = "Draw with Platforms"},
                 //new ButtonInfo { buttonText = "Download SOSD", method =() => StoryOfSuperDUper.Download(, "https://github.com/LTR77/GorillaX/raw/refs/heads/master/Mods/Sounds/ElevenLabs_2025-06-25T17_31_30_Wyatt-%20Wise%20Rustic%20Cowboy_pvc_sp100_s84_sb100_v3.mp3", "SOSD.mp3", "GorillaX/Sounds"), isTogglable = false, toolTip = "Download needed for Story of Super Duper to play"},
                 new ButtonInfo { buttonText = "Story of Super Duper", method =() => StoryOfSuperDUper.SoundPlayer.PlaySound(StoryOfSuperDUper.audioClip), isTogglable = false, toolTip = "Play Story of SUper DUper"},
-	    },
+	          },
             new ButtonInfo[] // Speedboost
             {
                 new ButtonInfo { buttonText = "Return to Movement", method =() => Global.EnterMovement(), isTogglable = false, toolTip = "Returns to the Movement page of the menu."},
@@ -114,6 +114,14 @@ namespace GorillaX.Menu
                 new ButtonInfo { buttonText = "Do Not Use Speedboost [UND?] [W]", method =() => SpeedBoost.DoNotUseSpeedBoostMod(), isTogglable = true, toolTip = "You better not"},
                 new ButtonInfo { buttonText = "Dont Even Try Speedboost [UND?] [W]", method =() => SpeedBoost.DontEvenTrySpeedBoostMod(), isTogglable = true, toolTip = "You really shouldnt"},
                 new ButtonInfo { buttonText = "'no' Speedboost [UND?] [W]", method =() => SpeedBoost.NoSpeedBoostMod(), isTogglable = true, toolTip = "no, just no"},
+            },
+            new ButtonInfo[] // VRRig
+            {
+              new ButtonInfo { buttonText = "Return to Movement", method =() => Global.EnterMovement(), isTogglable = false, toolTip = "Returns to the Movement page of the menu."},
+              new ButtonInfo {  buttonText = "Head 90 Z [W] [UND]", enableMethod =() => HeadMods.Head90ZMod(), disableMethod =() => HeadMods.FixHead(), isTogglable = true, toolTip = "Put ur head 90 degrees on Z axis"},              
+              new ButtonInfo {  buttonText = "Head 180 Z [W] [UND]", enableMethod =() => HeadMods.Head180ZMod(), disableMethod =() => HeadMods.FixHead(), isTogglable = true, toolTip = "Put ur head 180 degrees on Z axis"},
+              new ButtonInfo {  buttonText = "Head 180 Y [W] [UND]", enableMethod =() => HeadMods.Head180YMod(), disableMethod =() => HeadMods.FixHead(), isTogglable = true, toolTip = "Put ur head 180 degrees on Y axis"},
+              new ButtonInfo {  buttonText = "Fix Head [W] [UND]", method =() => HeadMods.FixHead(), isTogglable = true, toolTip = "Put ur head in the normal position"},
             }
         };
     }

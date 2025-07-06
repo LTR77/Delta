@@ -81,6 +81,7 @@ namespace GorillaX.Classes
 {
     internal class ColorCustom
     {
+        public static int ColorCycler = 0;
         public static string ColorString = "Fade Color";
         public static Color UseableColor = Color.red;
         public static Color TempUseableColor = Color.red;
@@ -88,7 +89,7 @@ namespace GorillaX.Classes
         {
             Color[] colors = { Color.red, Color.green, Color.blue, Color.yellow, Color.cyan, Color.magenta };
 
-            int ColorCycler = 0;
+          
             ColorCycler++;
             UseableColor = colors[ColorCycler];
 

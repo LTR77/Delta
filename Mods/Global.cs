@@ -36,5 +36,9 @@ namespace GorillaX.Mods
         {
             buttonsType = 10;
         }
+        public static void EnterVRRig() 
+        {
+          buttonsType = 11;
+        }
     }
 }
