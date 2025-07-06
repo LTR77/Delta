@@ -8,6 +8,7 @@ namespace GorillaX.Mods
 {
   internal class WaterSpammers 
   {
+    public static GameObject Pointer;
     public static void WaterHandsSpamMod() 
     {
       if(ControllerInputPoller.instance.rightGrab) {
@@ -24,12 +25,12 @@ namespace GorillaX.Mods
         RaycastHit hit;
         var GunData = RenderGun(GorillaTagger.Instance.rightHandTransform, out hit);
         RaycastHit Ray = GunData.Ray;
-        GameObject NewPointer = GunData.NewPointer;
+        Pointer = GunData.NewPointer;
       }
       
       if(ControllerInputPoller.instance.rightControllerIndexFloat >= 0.5f) 
       {
-        RPCs.SendRPCfromPlayer("RPC_PlaySplashEffect", NewPointer.transform.position, NewPointer.transform.rotation);
+        RPCs.SendRPCfromPlayer("RPC_PlaySplashEffect", Pointer.transform.position, Pointer.transform.rotation);
       }
     }
   }
