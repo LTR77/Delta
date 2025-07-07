@@ -1,8 +1,10 @@
 using System;
 using System.Text;
-using System.Collections.Generic
+using System.Collections.Generic;
 using UnityEngine;
-using Photon.Pun
+using Photon.Pun;
+using Photon.Realtime;
+using ExitGames.Client.Photon;
 
 namespace GorillaX.Mods 
 {
@@ -19,13 +21,12 @@ namespace GorillaX.Mods
         },
         new RaiseEventOptions 
         {
-          CachingOption = EventCaching.DoNotCache;
-          Recievers = ReceiverGroup.Others
+          CachingOption = EventCaching.DoNotCache,
+          Receivers = ReceiverGroup.Others
         },
-        SendOptions.Reliable
+        SendOptions.SendReliable
         );
         PhotonNetwork.SendAllOutgoingCommands();
-        PhotonNetwork.NetworkingClient.LoadBalancingPeer.SendAllOutgoingCommands();
       }
     }
   }
