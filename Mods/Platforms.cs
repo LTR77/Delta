@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using UnityEngine.ProBuilder.Shapes;
+using static GorillaX.Menu.Main;
+using static GorillaX.Settings;
+
 
 namespace GorillaX.Mods
 {
@@ -11,13 +14,22 @@ namespace GorillaX.Mods
         private static GameObject leftPlat = null;
         private static GameObject rightPlat = null;
         private static GameObject CreatePlatformsOnHands(Transform Handtransform, Color color, bool DelAll, bool Slippery)
-
         {
+            float rainbowcycler = Time.time % 1f;
+            Color regenbogenfarbekreislaufdings = Color.HSVToRGB(rainbowcycler, 1, 1)
             GameObject Platform = GameObject.CreatePrimitive(PrimitiveType.Cube);
             Platform.transform.localScale = new Vector3(0.025f, 0.3f, 0.4f);
             Platform.transform.position = Handtransform.position + Vector3.down * 0.04f;
             Platform.transform.rotation = Handtransform.rotation;
-            Platform.GetComponent<Renderer>().material.color = color;
+            if(backgroundColor.isRainbow) 
+            {
+              Platform.GetComponent<Renderer>().material.color = regenbogenfarbekreislaufdings;
+            }
+            else 
+            {
+              Platform.GetComponent<Renderer>().material.color = color;
+            }
+
             if(DelAll)
             {
                 GameObject[] AllPlatforms = GameObject.FindGameObjectsWithTag("Platform");
@@ -59,11 +71,11 @@ namespace GorillaX.Mods
         {
             if(ControllerInputPoller.instance.rightGrab)
             {
-                CreatePlatformsOnHands(GorillaTagger.Instance.rightHandTransform, Color.red, false, false);
+                CreatePlatformsOnHands(GorillaTagger.Instance.rightHandTransform, Color.blue, false, false);
             }
             if(ControllerInputPoller.instance.leftGrab)
             {
-                CreatePlatformsOnHands(GorillaTagger.Instance.leftHandTransform, Color.black, false, false);
+                CreatePlatformsOnHands(GorillaTagger.Instance.leftHandTransform, Color.red, false, false);
             }
             if(ControllerInputPoller.instance.leftControllerSecondaryButton)
             {

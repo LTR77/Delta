@@ -84,8 +84,10 @@ namespace GorillaX.Menu
             new ButtonInfo[] {               // OP Mods
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
                 new ButtonInfo { buttonText = "Water Hands [W] [UND]", enableMethod =() => WaterSpammers.WaterHandsSpamMod(), disableMethod =() => RPCs.DisableRPCProtect(), isTogglable = true, toolTip = "Become water Benderr"},
-                new ButtonInfo { buttonText = "Water Gun [W?] [UND?]", enableMethod =() => WaterSpammers.WaterGunMod(), disableMethod =() => RPCs.DisableRPCProtect(), isTogglable = true, toolTip = "Water Spawns where Gun is shot"},
-                new ButtonInfo { buttonText = "Lag All 200 [W? UND?]", method =() => Lagg.LagAllMod(), isTogglable = true, toolTip = "Lags Everyone in the Lobby"},
+                new ButtonInfo { buttonText = "Water Gun [W?] [UND]", enableMethod =() => WaterSpammers.WaterGunMod(), disableMethod =() => RPCs.DisableRPCProtect(), isTogglable = true, toolTip = "Water Spawns where Gun is shot"},
+                new ButtonInfo { buttonText = "Lag All 200 V1 [W? U]", method =() => Lagg.LagAllV1Mod(), isTogglable = true, toolTip = "Lags Everyone in the Lobby"},
+                new ButtonInfo { buttonText = "Lag All 200 V2 [W? UND?]", method =() => Lagg.LagAllV2Mod(), isTogglable = true, toolTip = "Lags Everyone in the Lobby"},
+                new ButtonInfo { buttonText = "Lag Gun 200 V2 [W? UND?]", method =() => Lagg.LagAllV2Mod(), isTogglable = true, toolTip = "Lags Everyone in the Lobby"},
             },
             new ButtonInfo[] { // Useful Mods
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
