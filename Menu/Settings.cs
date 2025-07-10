@@ -9,8 +9,8 @@ namespace GorillaX
         public static ExtGradient backgroundColor = new ExtGradient{isRainbow = true};
         public static ExtGradient[] buttonColors = new ExtGradient[]
         {
-            new ExtGradient{colors = GetSolidGradient(Color.black) }, // Disabled
-            new ExtGradient{isRainbow = true} // Enabled
+            backgroundColor, // Disabled
+            new ExtGradient{colors = GetSolidGradient(Color.yellow)} // Enabled
         };
         public static Color[] textColors = new Color[]
         {

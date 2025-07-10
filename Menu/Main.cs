@@ -1,4 +1,3 @@
-// d
 ﻿using BepInEx;
 using BepInEx.Logging;
 using GorillaX.Classes;
@@ -133,7 +132,7 @@ namespace GorillaX.Menu
                 menuBackground.transform.rotation = Quaternion.identity;
                 menuBackground.transform.localScale = menuSize;
                 menuBackground.GetComponent<Renderer>().material.color = backgroundColor.colors[0].color;
-            menuBackground.transform.position = new Vector3(0.05f, 0f, 0f);
+                menuBackground.transform.position = new Vector3(0.05f, 0f, 0f);
 
                 ColorChanger colorChanger = menuBackground.AddComponent<ColorChanger>();
                 colorChanger.colorInfo = backgroundColor;
@@ -200,7 +199,7 @@ namespace GorillaX.Menu
 
             // Buttons
                 // Disconnect
-                    if (disconnectButton)
+                    /*if (disconnectButton)
                     {
                         GameObject disconnectbutton = GameObject.CreatePrimitive(PrimitiveType.Cube);
                         if (!UnityInput.Current.GetKey(KeyCode.E))
@@ -241,6 +240,7 @@ namespace GorillaX.Menu
                         rectt.localPosition = new Vector3(0.064f, 0f, 0.23f);
                         rectt.rotation = Quaternion.Euler(new Vector3(180f, 90f, 90f));
                     }
+                    */
                     // Home Button
 
                     // Page Buttons
@@ -253,8 +253,8 @@ namespace GorillaX.Menu
                     gameObject.GetComponent<BoxCollider>().isTrigger = true;
                     gameObject.transform.parent = menu.transform;
                     gameObject.transform.rotation = Quaternion.identity;
-                    gameObject.transform.localScale = new Vector3(0.09f, 0.2f, 0.9f);
-                    gameObject.transform.localPosition = new Vector3(0.56f, 0.65f, 0);
+                    gameObject.transform.localScale = new Vector3(0.09f, 0.17f, 0.1f);
+                    gameObject.transform.localPosition = new Vector3(-0.085, -0.17, 0f);
                     gameObject.GetComponent<Renderer>().material.color = buttonColors[0].colors[0].color;
                     gameObject.AddComponent<Classes.Button>().relatedText = "PreviousPage";
 
@@ -279,7 +279,7 @@ namespace GorillaX.Menu
                     component = text.GetComponent<RectTransform>();
                     component.localPosition = Vector3.zero;
                     component.sizeDelta = new Vector2(0.2f, 0.03f);
-                    component.localPosition = new Vector3(0.064f, 0.195f, 0f);
+                    component.localPosition = new Vector3(-0.085, -0.17, 0f);
                     component.rotation = Quaternion.Euler(new Vector3(180f, 90f, 90f));
 
                     gameObject = GameObject.CreatePrimitive(PrimitiveType.Cube);
@@ -291,8 +291,8 @@ namespace GorillaX.Menu
                     gameObject.GetComponent<BoxCollider>().isTrigger = true;
                     gameObject.transform.parent = menu.transform;
                     gameObject.transform.rotation = Quaternion.identity;
-                    gameObject.transform.localScale = new Vector3(0.09f, 0.2f, 0.9f);
-                    gameObject.transform.localPosition = new Vector3(0.56f, -0.65f, 0);
+                    gameObject.transform.localScale = new Vector3(0.09f, 0.17f, 0.1f);
+                    gameObject.transform.localPosition = new Vector3(0.085f, 0.17f, 0f);
                     gameObject.GetComponent<Renderer>().material.color = buttonColors[0].colors[0].color;
                     gameObject.AddComponent<Classes.Button>().relatedText = "NextPage";
 
@@ -317,7 +317,7 @@ namespace GorillaX.Menu
                     component = text.GetComponent<RectTransform>();
                     component.localPosition = Vector3.zero;
                     component.sizeDelta = new Vector2(0.2f, 0.03f);
-                    component.localPosition = new Vector3(0.064f, -0.195f, 0f);
+                    component.localPosition = new Vector3(0.085f, 0.17f, 0f);
                     component.rotation = Quaternion.Euler(new Vector3(180f, 90f, 90f));
 
                 // Mod Buttons
