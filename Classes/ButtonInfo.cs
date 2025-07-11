@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GorillaX.Classes
+namespace Delta.Classes
 {
     public class ButtonInfo
     {

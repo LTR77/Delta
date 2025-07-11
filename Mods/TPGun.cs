@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using static GorillaX.Mods.GunRenderer;
+using static Delta.Mods.GunRenderer;
 using UnityEngine;
 using BepInEx;
 
-namespace GorillaX.Mods
+namespace Delta.Mods
 {
     internal class TPGun
     {

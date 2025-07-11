@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GorillaX.Mods
+namespace Delta.Mods
 {
     internal class SpeedBoost
     {

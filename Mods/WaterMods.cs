@@ -2,9 +2,9 @@ using System;
 using System.Text;
 using System.Collections.Generic;
 using UnityEngine;
-using static GorillaX.Mods.GunRenderer;
+using static Delta.Mods.GunRenderer;
 
-namespace GorillaX.Mods 
+namespace Delta.Mods 
 {
   internal class WaterSpammers 
   {

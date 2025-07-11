@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using static GorillaX.Menu.Main;
-using static GorillaX.Settings;
+using static Delta.Menu.Main;
+using static Delta.Settings;
 
-namespace GorillaX.Mods
+namespace Delta.Mods
 
 
 {
@@ -77,7 +77,7 @@ namespace GorillaX.Mods
         }
     }
 }
-namespace GorillaX.Classes
+namespace Delta.Classes
 {
     internal class ColorCustom
     {

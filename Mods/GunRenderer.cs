@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.LightAnchor;
 
-namespace GorillaX.Mods
+namespace Delta.Mods
 {
     internal class GunRenderer
     {

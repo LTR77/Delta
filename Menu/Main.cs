@@ -1,9 +1,9 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
-using GorillaX.Classes;
-using GorillaX.Menu;
-using GorillaX.Mods;
-using GorillaX.Notifications;
+using Delta.Classes;
+using Delta.Menu;
+using Delta.Mods;
+using Delta.Notifications;
 using HarmonyLib;
 using Photon.Pun;
 using System;
@@ -12,10 +12,10 @@ using System.Reflection;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
-using static GorillaX.Menu.Buttons;
-using static GorillaX.Settings;
+using static Delta.Menu.Buttons;
+using static Delta.Settings;
 
-namespace GorillaX.Menu
+namespace Delta.Menu
 {
     [HarmonyPatch(typeof(GorillaLocomotion.GTPlayer))]
     [HarmonyPatch("LateUpdate", MethodType.Normal)]

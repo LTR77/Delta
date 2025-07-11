@@ -5,9 +5,9 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using ExitGames.Client.Photon;
-using static GorillaX.Mods.GunRenderer;
+using static Delta.Mods.GunRenderer;
 
-namespace GorillaX.Mods 
+namespace Delta.Mods 
 {
   internal class Lagg 
   {

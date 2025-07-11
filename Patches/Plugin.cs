@@ -1,10 +1,10 @@
 ﻿using BepInEx;
 using System.ComponentModel;
 
-namespace GorillaX.Patches
+namespace Delta.Patches
 {
-    [Description(GorillaX.PluginInfo.Description)]
-    [BepInPlugin(GorillaX.PluginInfo.GUID, GorillaX.PluginInfo.Name, GorillaX.PluginInfo.Version)]
+    [Description(Delta.PluginInfo.Description)]
+    [BepInPlugin(Delta.PluginInfo.GUID, Delta.PluginInfo.Name, Delta.PluginInfo.Version)]
     public class HarmonyPatches : BaseUnityPlugin
     {
         private void OnEnable()

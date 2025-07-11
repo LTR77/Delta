@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using UnityEngine.ProBuilder.Shapes;
-using static GorillaX.Menu.Main;
-using static GorillaX.Settings;
+using static Delta.Menu.Main;
+using static Delta.Settings;
 
 
-namespace GorillaX.Mods
+namespace Delta.Mods
 {
     internal class Platforms
     {

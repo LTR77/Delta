@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
-using GorillaX.Menu;
+using Delta.Menu;
 
-namespace GorillaX.Mods
+namespace Delta.Mods
 {
     internal class AntiReport
     {

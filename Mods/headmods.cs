@@ -3,7 +3,7 @@ using System.Text;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GorillaX.Mods 
+namespace Delta.Mods 
 {
   internal class HeadMods 
   {

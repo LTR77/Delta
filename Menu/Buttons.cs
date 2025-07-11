@@ -1,9 +1,9 @@
-﻿using GorillaX.Mods;
-using GorillaX.Classes;
-using static GorillaX.Settings;
+﻿using Delta.Mods;
+using Delta.Classes;
+using static Delta.Settings;
 using UnityEngine;
 
-namespace GorillaX.Menu
+namespace Delta.Menu
 {
     internal class Buttons : MonoBehaviour
     {
@@ -105,7 +105,7 @@ namespace GorillaX.Menu
             {
                 new ButtonInfo { buttonText = "Return to Main", method =() => Global.ReturnHome(), isTogglable = false, toolTip = "Returns to the main page of the menu."},
                 new ButtonInfo { buttonText = "Platforms Draw [UND] [CS] [W]", method =() => Platforms.PlatformDrawMod(), isTogglable = true, toolTip = "Draw with Platforms"},
-                //new ButtonInfo { buttonText = "Download SOSD", method =() => StoryOfSuperDUper.Download(, "https://github.com/LTR77/GorillaX/raw/refs/heads/master/Mods/Sounds/ElevenLabs_2025-06-25T17_31_30_Wyatt-%20Wise%20Rustic%20Cowboy_pvc_sp100_s84_sb100_v3.mp3", "SOSD.mp3", "GorillaX/Sounds"), isTogglable = false, toolTip = "Download needed for Story of Super Duper to play"},
+                //new ButtonInfo { buttonText = "Download SOSD", method =() => StoryOfSuperDUper.Download(, "https://github.com/LTR77/Delta/raw/refs/heads/master/Mods/Sounds/ElevenLabs_2025-06-25T17_31_30_Wyatt-%20Wise%20Rustic%20Cowboy_pvc_sp100_s84_sb100_v3.mp3", "SOSD.mp3", "Delta/Sounds"), isTogglable = false, toolTip = "Download needed for Story of Super Duper to play"},
                 new ButtonInfo { buttonText = "Story of Super Duper", method =() => StoryOfSuperDUper.SoundPlayer.PlaySound(StoryOfSuperDUper.audioClip), isTogglable = false, toolTip = "Play Story of SUper DUper"},
 	          },
             new ButtonInfo[] // Speedboost

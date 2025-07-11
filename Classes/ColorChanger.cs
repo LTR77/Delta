@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GorillaX.Classes
+namespace Delta.Classes
 {
     public class ColorChanger : TimedBehaviour
     {

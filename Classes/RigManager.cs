@@ -4,7 +4,7 @@ using BepInEx;
 using HarmonyLib;
 using UnityEngine;
 
-namespace GorillaX.Classes
+namespace Delta.Classes
 {
     internal class RigManager : BaseUnityPlugin
     {

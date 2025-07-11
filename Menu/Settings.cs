@@ -1,8 +1,8 @@
-﻿using GorillaX.Classes;
+﻿using Delta.Classes;
 using UnityEngine;
-using static GorillaX.Menu.Main;
+using static Delta.Menu.Main;
 
-namespace GorillaX
+namespace Delta
 {
     internal class Settings
     {

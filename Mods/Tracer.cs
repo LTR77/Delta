@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 
-namespace GorillaX.Mods
+namespace Delta.Mods
 {
     internal class Tracer
     {

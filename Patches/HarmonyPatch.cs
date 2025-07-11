@@ -2,7 +2,7 @@
 using HarmonyLib;
 using UnityEngine;
 
-namespace GorillaX.Patches
+namespace Delta.Patches
 {
     public class Menu : MonoBehaviour
     {
@@ -14,7 +14,7 @@ namespace GorillaX.Patches
             {
                 if (instance == null)
                 {
-                    instance = new Harmony(GorillaX.PluginInfo.GUID);
+                    instance = new Harmony(Delta.PluginInfo.GUID);
                 }
                 instance.PatchAll(Assembly.GetExecutingAssembly());
                 IsPatched = true;

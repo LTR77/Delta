@@ -6,9 +6,9 @@ using UnityEngine;
 using BepInEx.Logging;
 using System.IO;
 using Photon.Pun;
-using GorillaX.Menu;
+using Delta.Menu;
 
-namespace GorillaX.Mods
+namespace Delta.Mods
 {
     internal class IronMonkey
     {

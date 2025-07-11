@@ -1,6 +1,6 @@
-﻿using static GorillaX.Menu.Main;
+﻿using static Delta.Menu.Main;
 
-namespace GorillaX.Mods
+namespace Delta.Mods
 {
     internal class Global
     {

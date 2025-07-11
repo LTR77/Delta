@@ -1,8 +1,8 @@
 ﻿using System;
 using UnityEngine;
-using GorillaX.Mods;
+using Delta.Mods;
 
-namespace GorillaX.Classes
+namespace Delta.Classes
 {
     public class ExtGradient
     {

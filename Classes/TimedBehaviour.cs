@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 
-namespace GorillaX.Classes
+namespace Delta.Classes
 {
     public class TimedBehaviour : MonoBehaviour
     {

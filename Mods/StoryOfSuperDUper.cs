@@ -7,7 +7,7 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.Networking;
 
-namespace GorillaX.Mods
+namespace Delta.Mods
 {
     internal class StoryOfSuperDUper
     {

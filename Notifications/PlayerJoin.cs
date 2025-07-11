@@ -1,12 +1,12 @@
 ﻿using HarmonyLib;
-using GorillaX.Notifications;
+using Delta.Notifications;
 using Photon.Pun;
 using Photon.Realtime;
 using System.IO;
 using UnityEngine;
-using static GorillaX.Menu.Main;
+using static Delta.Menu.Main;
 
-namespace GorillaX.Patches
+namespace Delta.Patches
 {
     [HarmonyPatch(typeof(MonoBehaviourPunCallbacks), "OnPlayerEnteredRoom")]
     internal class JoinPatch : MonoBehaviour

@@ -4,7 +4,7 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.Rendering.Universal.Internal;
 
-namespace GorillaX.Mods
+namespace Delta.Mods
 {
     internal class Noclip
     {
