@@ -26,6 +26,14 @@ namespace Delta.Mods
                 GorillaLocomotion.GTPlayer.Instance.transform.position += GorillaLocomotion.GTPlayer.Instance.headCollider.transform.forward * Time.deltaTime * flySpeed;
             }
         }
+	public static void RealSlingshotFlyMod() 
+
+	{
+		if(ControllerInputPoller.instance.rightGrab)
+		{
+			GorillaTagger.Instance.rigidbody.velocity += GorillaLocomotion.GTPlayer.Instance.headCollider.transform.forward * Time.deltaTime * 20.0f;
+		}
+	}
     }
 }
 

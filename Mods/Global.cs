@@ -40,5 +40,9 @@ namespace Delta.Mods
         {
           buttonsType = 11;
         }
+	public static NetPlayer GetNetPlayer(VRRig player) 
+	{
+		return player.Creator;
+	}
     }
 }

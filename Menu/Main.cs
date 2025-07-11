@@ -254,7 +254,7 @@ namespace Delta.Menu
                     gameObject.transform.parent = menu.transform;
                     gameObject.transform.rotation = Quaternion.identity;
                     gameObject.transform.localScale = new Vector3(0.09f, 0.17f, 0.1f);
-                    gameObject.transform.localPosition = new Vector3(-0.085, -0.17, 0f);
+                    gameObject.transform.localPosition = new Vector3(-0.085f, -0.17f, 0f);
                     gameObject.GetComponent<Renderer>().material.color = buttonColors[0].colors[0].color;
                     gameObject.AddComponent<Classes.Button>().relatedText = "PreviousPage";
 
@@ -279,7 +279,7 @@ namespace Delta.Menu
                     component = text.GetComponent<RectTransform>();
                     component.localPosition = Vector3.zero;
                     component.sizeDelta = new Vector2(0.2f, 0.03f);
-                    component.localPosition = new Vector3(-0.085, -0.17, 0f);
+                    component.localPosition = new Vector3(-0.085f, -0.17f, 0f);
                     component.rotation = Quaternion.Euler(new Vector3(180f, 90f, 90f));
 
                     gameObject = GameObject.CreatePrimitive(PrimitiveType.Cube);

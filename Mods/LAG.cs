@@ -11,7 +11,7 @@ namespace Delta.Mods
 {
   internal class Lagg 
   {
-    NetPlayer player = null;
+    private static NetPlayer player = null;
     public static void LagAllV1Mod() 
     {
       for(int x = 0;x<9999;x++) 
