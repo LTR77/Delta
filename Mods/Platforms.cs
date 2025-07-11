@@ -16,7 +16,7 @@ namespace Delta.Mods
         private static GameObject CreatePlatformsOnHands(Transform Handtransform, Color color, bool DelAll, bool Slippery)
         {
             float rainbowcycler = Time.time % 1f;
-            Color regenbogenfarbekreislaufdings = Color.HSVToRGB(rainbowcycler, 1, 1)
+            Color regenbogenfarbekreislaufdings = Color.HSVToRGB(rainbowcycler, 1, 1);
             GameObject Platform = GameObject.CreatePrimitive(PrimitiveType.Cube);
             Platform.transform.localScale = new Vector3(0.025f, 0.3f, 0.4f);
             Platform.transform.position = Handtransform.position + Vector3.down * 0.04f;

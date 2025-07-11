@@ -43,7 +43,7 @@ namespace Delta.Mods
         new RaiseEventOptions 
         {
           CachingOption = EventCaching.DoNotCache,
-          Receivers = ReceiverGroup.Others;
+          Receivers = ReceiverGroup.Others
         },
         SendOptions.SendReliable
         );
